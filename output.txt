@@ -1,0 +1,83 @@
+{
+    "amazon.com": {
+        "scan_time": 1606170778.5212102
+    },
+    "asee.org": {
+        "scan_time": 1606170778.521229
+    },
+    "auditoryneuroscience.com": {
+        "scan_time": 1606170778.5212271
+    },
+    "clocktab.com": {
+        "scan_time": 1606170778.521226
+    },
+    "en.wikipedia.org": {
+        "scan_time": 1606170778.521207
+    },
+    "facebook.com": {
+        "scan_time": 1606170778.521209
+    },
+    "fandom.com": {
+        "scan_time": 1606170778.5212128
+    },
+    "gradeinflation.com": {
+        "scan_time": 1606170778.52123
+    },
+    "illinois.edu": {
+        "scan_time": 1606170778.5212228
+    },
+    "imdb.com": {
+        "scan_time": 1606170778.5212119
+    },
+    "instagram.com": {
+        "scan_time": 1606170778.521216
+    },
+    "kellogg.northwestern.edu": {
+        "scan_time": 1606170778.521219
+    },
+    "kli.org": {
+        "scan_time": 1606170778.521232
+    },
+    "mccormick.northwestern.edu": {
+        "scan_time": 1606170778.521218
+    },
+    "northwestern.edu": {
+        "scan_time": 1606170778.521217
+    },
+    "pinterest.com": {
+        "scan_time": 1606170778.521214
+    },
+    "pmichaud.com": {
+        "scan_time": 1606170778.5212312
+    },
+    "reddit.com": {
+        "scan_time": 1606170778.521211
+    },
+    "spacejam.com": {
+        "scan_time": 1606170778.52123
+    },
+    "stevetarzia.com": {
+        "scan_time": 1606170778.5212228
+    },
+    "tripadvisor.com": {
+        "scan_time": 1606170778.521214
+    },
+    "twitter.com": {
+        "scan_time": 1606170778.521208
+    },
+    "uchicago.edu": {
+        "scan_time": 1606170778.5212202
+    },
+    "users.cs.northwestern.edu": {
+        "scan_time": 1606170778.521219
+    },
+    "walmart.com": {
+        "scan_time": 1606170778.521216
+    },
+    "yelp.com": {
+        "scan_time": 1606170778.5212102
+    },
+    "youtube.com": {
+        "scan_time": 1606170778.521205
+    }
+}
