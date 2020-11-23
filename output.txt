@@ -1,83 +1,380 @@
 {
-    "amazon.com": {
-        "scan_time": 1606170778.5212102
-    },
-    "asee.org": {
-        "scan_time": 1606170778.521229
-    },
-    "auditoryneuroscience.com": {
-        "scan_time": 1606170778.5212271
-    },
-    "clocktab.com": {
-        "scan_time": 1606170778.521226
+    "youtube.com": {
+        "scan_time": 1606172696.752609,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
     "en.wikipedia.org": {
-        "scan_time": 1606170778.521207
-    },
-    "facebook.com": {
-        "scan_time": 1606170778.521209
-    },
-    "fandom.com": {
-        "scan_time": 1606170778.5212128
-    },
-    "gradeinflation.com": {
-        "scan_time": 1606170778.52123
-    },
-    "illinois.edu": {
-        "scan_time": 1606170778.5212228
-    },
-    "imdb.com": {
-        "scan_time": 1606170778.5212119
-    },
-    "instagram.com": {
-        "scan_time": 1606170778.521216
-    },
-    "kellogg.northwestern.edu": {
-        "scan_time": 1606170778.521219
-    },
-    "kli.org": {
-        "scan_time": 1606170778.521232
-    },
-    "mccormick.northwestern.edu": {
-        "scan_time": 1606170778.521218
-    },
-    "northwestern.edu": {
-        "scan_time": 1606170778.521217
-    },
-    "pinterest.com": {
-        "scan_time": 1606170778.521214
-    },
-    "pmichaud.com": {
-        "scan_time": 1606170778.5212312
-    },
-    "reddit.com": {
-        "scan_time": 1606170778.521211
-    },
-    "spacejam.com": {
-        "scan_time": 1606170778.52123
-    },
-    "stevetarzia.com": {
-        "scan_time": 1606170778.5212228
-    },
-    "tripadvisor.com": {
-        "scan_time": 1606170778.521214
+        "scan_time": 1606172696.752788,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
     "twitter.com": {
-        "scan_time": 1606170778.521208
+        "scan_time": 1606172696.7530198,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
-    "uchicago.edu": {
-        "scan_time": 1606170778.5212202
+    "facebook.com": {
+        "scan_time": 1606172696.753323,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
-    "users.cs.northwestern.edu": {
-        "scan_time": 1606170778.521219
-    },
-    "walmart.com": {
-        "scan_time": 1606170778.521216
+    "amazon.com": {
+        "scan_time": 1606172696.753608,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
     "yelp.com": {
-        "scan_time": 1606170778.5212102
+        "scan_time": 1606172696.753886,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     },
-    "youtube.com": {
-        "scan_time": 1606170778.521205
+    "reddit.com": {
+        "scan_time": 1606172696.754102,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "imdb.com": {
+        "scan_time": 1606172696.754294,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "fandom.com": {
+        "scan_time": 1606172696.754421,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "pinterest.com": {
+        "scan_time": 1606172696.754553,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "tripadvisor.com": {
+        "scan_time": 1606172696.7548501,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "instagram.com": {
+        "scan_time": 1606172696.755085,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "walmart.com": {
+        "scan_time": 1606172696.7553458,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "northwestern.edu": {
+        "scan_time": 1606172696.755687,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "mccormick.northwestern.edu": {
+        "scan_time": 1606172696.7559412,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "kellogg.northwestern.edu": {
+        "scan_time": 1606172696.756224,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "users.cs.northwestern.edu": {
+        "scan_time": 1606172696.7565079,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "uchicago.edu": {
+        "scan_time": 1606172696.756664,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "illinois.edu": {
+        "scan_time": 1606172696.7568152,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "stevetarzia.com": {
+        "scan_time": 1606172696.757047,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "clocktab.com": {
+        "scan_time": 1606172696.757201,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "auditoryneuroscience.com": {
+        "scan_time": 1606172696.757388,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "asee.org": {
+        "scan_time": 1606172696.7577338,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "gradeinflation.com": {
+        "scan_time": 1606172696.757947,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "spacejam.com": {
+        "scan_time": 1606172696.758125,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "pmichaud.com": {
+        "scan_time": 1606172696.758373,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
+    },
+    "kli.org": {
+        "scan_time": 1606172696.758639,
+        "ipv4_addresses": "test ipv4",
+        "ipv6_addresses": "test ipv6",
+        "http_server": "test http_ser",
+        "insecure_http": "test insecrue",
+        "redirect_to_https": "test redirect",
+        "hsts": "test hsts",
+        "tls_versions": "test tls",
+        "root_ca": "test root",
+        "rdns_names": "test rdns",
+        "rtt_range": "test rtt",
+        "geo_locations": "test geo"
     }
 }
