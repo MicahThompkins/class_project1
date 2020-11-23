@@ -1,7 +1,20 @@
 {
     "youtube.com": {
-        "scan_time": 1606172696.752609,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175534.062918,
+        "ipv4_addresses": [
+            "216.58.192.142",
+            "172.217.4.78",
+            "172.217.12.46",
+            "172.217.8.206",
+            "172.217.5.14",
+            "173.194.73.93",
+            "173.194.73.136",
+            "173.194.73.91",
+            "173.194.73.190",
+            "172.217.4.206",
+            "172.217.22.46",
+            "142.250.64.110"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -14,8 +27,11 @@
         "geo_locations": "test geo"
     },
     "en.wikipedia.org": {
-        "scan_time": 1606172696.752788,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175536.801422,
+        "ipv4_addresses": [
+            "208.80.154.224",
+            "91.198.174.192"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -28,8 +44,13 @@
         "geo_locations": "test geo"
     },
     "twitter.com": {
-        "scan_time": 1606172696.7530198,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175539.7894459,
+        "ipv4_addresses": [
+            "104.244.42.1",
+            "104.244.42.65",
+            "104.244.42.193",
+            "104.244.42.129"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -42,8 +63,16 @@
         "geo_locations": "test geo"
     },
     "facebook.com": {
-        "scan_time": 1606172696.753323,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175540.589034,
+        "ipv4_addresses": [
+            "157.240.18.35",
+            "157.240.2.35",
+            "157.240.19.35",
+            "69.171.250.35",
+            "31.13.67.35",
+            "157.240.196.35",
+            "157.240.1.35"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -56,8 +85,12 @@
         "geo_locations": "test geo"
     },
     "amazon.com": {
-        "scan_time": 1606172696.753608,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175541.3260329,
+        "ipv4_addresses": [
+            "176.32.98.166",
+            "176.32.103.205",
+            "205.251.242.103"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -70,8 +103,17 @@
         "geo_locations": "test geo"
     },
     "yelp.com": {
-        "scan_time": 1606172696.753886,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175542.43714,
+        "ipv4_addresses": [
+            "199.232.76.116",
+            "151.101.68.116",
+            "199.232.8.116",
+            "199.232.64.116",
+            "151.101.244.116",
+            "151.101.76.116",
+            "151.101.36.116",
+            "199.232.36.116"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -84,8 +126,13 @@
         "geo_locations": "test geo"
     },
     "reddit.com": {
-        "scan_time": 1606172696.754102,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175543.366079,
+        "ipv4_addresses": [
+            "151.101.193.140",
+            "151.101.1.140",
+            "151.101.65.140",
+            "151.101.129.140"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -98,8 +145,12 @@
         "geo_locations": "test geo"
     },
     "imdb.com": {
-        "scan_time": 1606172696.754294,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175544.955498,
+        "ipv4_addresses": [
+            "52.94.228.167",
+            "52.94.237.74",
+            "52.94.225.248"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -112,8 +163,13 @@
         "geo_locations": "test geo"
     },
     "fandom.com": {
-        "scan_time": 1606172696.754421,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175545.704627,
+        "ipv4_addresses": [
+            "151.101.0.194",
+            "151.101.64.194",
+            "151.101.128.194",
+            "151.101.192.194"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -126,8 +182,13 @@
         "geo_locations": "test geo"
     },
     "pinterest.com": {
-        "scan_time": 1606172696.754553,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175546.501646,
+        "ipv4_addresses": [
+            "151.101.64.84",
+            "151.101.128.84",
+            "151.101.192.84",
+            "151.101.0.84"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -140,8 +201,12 @@
         "geo_locations": "test geo"
     },
     "tripadvisor.com": {
-        "scan_time": 1606172696.7548501,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175547.153138,
+        "ipv4_addresses": [
+            "192.229.182.112",
+            "192.229.189.15",
+            "192.229.162.112"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -154,8 +219,81 @@
         "geo_locations": "test geo"
     },
     "instagram.com": {
-        "scan_time": 1606172696.755085,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175547.894486,
+        "ipv4_addresses": [
+            "3.92.105.183",
+            "3.210.57.193",
+            "34.198.216.139",
+            "34.206.33.202",
+            "52.7.184.177",
+            "52.23.94.118",
+            "52.71.167.163",
+            "52.207.170.164",
+            "3.211.190.38",
+            "3.209.3.232",
+            "54.80.100.38",
+            "34.228.93.200",
+            "3.218.3.143",
+            "52.71.154.102",
+            "18.214.150.8",
+            "34.235.180.162",
+            "34.203.7.201",
+            "3.213.147.143",
+            "35.170.160.105",
+            "52.5.183.1",
+            "52.73.249.1",
+            "54.82.122.213",
+            "3.226.99.60",
+            "54.85.141.180",
+            "54.156.178.64",
+            "52.71.223.34",
+            "34.239.89.209",
+            "35.153.214.22",
+            "3.225.109.3",
+            "3.210.81.177",
+            "3.224.36.18",
+            "35.173.151.18",
+            "34.192.140.205",
+            "52.72.197.223",
+            "3.208.232.245",
+            "3.220.83.93",
+            "52.4.134.145",
+            "3.211.195.191",
+            "3.216.253.146",
+            "34.200.35.57",
+            "54.204.115.52",
+            "35.171.109.191",
+            "52.73.165.14",
+            "52.54.252.124",
+            "52.0.178.195",
+            "52.6.191.0",
+            "52.2.169.197",
+            "34.195.3.186",
+            "34.199.142.235",
+            "3.91.121.236",
+            "34.227.122.11",
+            "52.200.201.185",
+            "52.0.135.38",
+            "34.196.54.210",
+            "3.228.78.219",
+            "52.3.71.143",
+            "3.209.182.35",
+            "3.225.55.231",
+            "34.195.97.235",
+            "35.173.166.200",
+            "3.217.178.33",
+            "52.73.139.89",
+            "54.165.4.42",
+            "34.206.159.43",
+            "52.1.124.13",
+            "54.83.139.7",
+            "35.172.167.44",
+            "34.231.40.113",
+            "3.230.53.225",
+            "34.197.66.165",
+            "34.199.240.222",
+            "54.235.179.196"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -168,8 +306,11 @@
         "geo_locations": "test geo"
     },
     "walmart.com": {
-        "scan_time": 1606172696.7553458,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175548.552015,
+        "ipv4_addresses": [
+            "161.170.230.170",
+            "161.170.232.170"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -182,8 +323,10 @@
         "geo_locations": "test geo"
     },
     "northwestern.edu": {
-        "scan_time": 1606172696.755687,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175549.623839,
+        "ipv4_addresses": [
+            "129.105.136.48"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -196,8 +339,10 @@
         "geo_locations": "test geo"
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1606172696.7559412,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175550.757424,
+        "ipv4_addresses": [
+            "129.105.1.129"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -210,8 +355,10 @@
         "geo_locations": "test geo"
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1606172696.756224,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175551.704283,
+        "ipv4_addresses": [
+            "165.124.147.150"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -224,8 +371,10 @@
         "geo_locations": "test geo"
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1606172696.7565079,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175552.497505,
+        "ipv4_addresses": [
+            "165.124.180.20"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -238,8 +387,10 @@
         "geo_locations": "test geo"
     },
     "uchicago.edu": {
-        "scan_time": 1606172696.756664,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175553.2226439,
+        "ipv4_addresses": [
+            "34.200.129.209"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -252,8 +403,10 @@
         "geo_locations": "test geo"
     },
     "illinois.edu": {
-        "scan_time": 1606172696.7568152,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175554.2518458,
+        "ipv4_addresses": [
+            "192.17.172.3"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -266,8 +419,10 @@
         "geo_locations": "test geo"
     },
     "stevetarzia.com": {
-        "scan_time": 1606172696.757047,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175555.304364,
+        "ipv4_addresses": [
+            "54.245.121.172"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -280,8 +435,12 @@
         "geo_locations": "test geo"
     },
     "clocktab.com": {
-        "scan_time": 1606172696.757201,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175556.248084,
+        "ipv4_addresses": [
+            "104.28.4.211",
+            "104.28.5.211",
+            "172.67.170.56"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -294,8 +453,10 @@
         "geo_locations": "test geo"
     },
     "auditoryneuroscience.com": {
-        "scan_time": 1606172696.757388,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175557.225588,
+        "ipv4_addresses": [
+            "144.214.26.111"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -308,8 +469,10 @@
         "geo_locations": "test geo"
     },
     "asee.org": {
-        "scan_time": 1606172696.7577338,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175558.296814,
+        "ipv4_addresses": [
+            "216.185.13.131"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -322,8 +485,10 @@
         "geo_locations": "test geo"
     },
     "gradeinflation.com": {
-        "scan_time": 1606172696.757947,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175559.028907,
+        "ipv4_addresses": [
+            "66.70.176.24"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -336,8 +501,11 @@
         "geo_locations": "test geo"
     },
     "spacejam.com": {
-        "scan_time": 1606172696.758125,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175560.178595,
+        "ipv4_addresses": [
+            "75.2.104.223",
+            "99.83.180.228"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -350,8 +518,10 @@
         "geo_locations": "test geo"
     },
     "pmichaud.com": {
-        "scan_time": 1606172696.758373,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175561.413642,
+        "ipv4_addresses": [
+            "23.254.203.248"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",
@@ -364,8 +534,10 @@
         "geo_locations": "test geo"
     },
     "kli.org": {
-        "scan_time": 1606172696.758639,
-        "ipv4_addresses": "test ipv4",
+        "scan_time": 1606175562.559154,
+        "ipv4_addresses": [
+            "208.97.188.67"
+        ],
         "ipv6_addresses": "test ipv6",
         "http_server": "test http_ser",
         "insecure_http": "test insecrue",

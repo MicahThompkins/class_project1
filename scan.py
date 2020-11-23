@@ -1,6 +1,9 @@
 import json
 import sys
 import time
+import subprocess
+
+
 print("hello world")
 command_input = sys.argv
 
@@ -30,17 +33,41 @@ def scan(url):
     for func in func_names:
         output_dictonary[func] = eval(func + "('" +  url + "')")
     return output_dictonary
-
+    # TODO add try catch if command line tool missing and timeoutexpired
 
 def scan_time(url):
     return time.time()
 
 
+# def nslookup(type):
+
+
 def ipv4_addresses(url):
-    return "test ipv4"
+    dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
+    ip_addys = []
+    for dns in dns_resolvers:
+        try:
+            result = subprocess.check_output(["nslookup", url, dns], timeout=2).decode("utf-8")
+        except subprocess.TimeoutExpired:
+            print("timing out")
+            continue
+        except subprocess.CalledProcessError:
+            print("calledProcesserror")
+            continue
+        split_result = result.split("Name")
+        del split_result[0]
+        for address in split_result:
+            find_index = address.find("Address: ")
+            addy = address[find_index + 9:]
+            addy = addy.strip()
+            if addy not in ip_addys:
+                ip_addys.append(addy)
+    return ip_addys
 
 
 def ipv6_addresses(url):
+    dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
+
     return "test ipv6"
 
 
