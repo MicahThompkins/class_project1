@@ -39,9 +39,6 @@ def scan_time(url):
     return time.time()
 
 
-# def nslookup(type):
-
-
 def ipv4_addresses(url):
     dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
     ip_addys = []
@@ -49,10 +46,10 @@ def ipv4_addresses(url):
         try:
             result = subprocess.check_output(["nslookup", url, dns], timeout=2).decode("utf-8")
         except subprocess.TimeoutExpired:
-            print("timing out")
+            # print("timing out")
             continue
         except subprocess.CalledProcessError:
-            print("calledProcesserror")
+            # print("calledProcesserror")
             continue
         split_result = result.split("Name")
         del split_result[0]
@@ -67,8 +64,29 @@ def ipv4_addresses(url):
 
 def ipv6_addresses(url):
     dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
+    ip_addys = []
+    for dns in dns_resolvers:
+        try:
+            result = subprocess.check_output(["nslookup", "-type=AAAA", url, dns],
+                                             timeout=2).decode("utf-8")
+        except subprocess.TimeoutExpired:
+            # print("timing out")
+            continue
+        except subprocess.CalledProcessError:
+            # print("calledProcesserror")
+            continue
+        if "Can't find" in result:
+            continue
+        else:
+            split_result = result.split("has AAAA address")
+            del split_result[0]
+            for address in split_result:
+                addy = address.split("\n")
+                addy = addy[0].strip()
+                if addy not in ip_addys:
+                    ip_addys.append(addy)
+    return ip_addys
 
-    return "test ipv6"
 
 
 def http_server(url):

@@ -6,6 +6,19 @@ import subprocess
 result = subprocess.check_output(["nslookup", "-type=AAAA", "google.com", "8.8.8.8"],
                                  timeout=2).decode("utf-8")
 print(result)
+if "Can't find" in result:
+    print(True)
+else:
+    print(False)
+split_result = result.split("has AAAA address")
+print(split_result)
+del split_result[0]
+address = split_result[0].split("\n")
+address[0] = address[0].strip()
+print(address)
+
+
+## IPV4 test code below
 # split_result = result.split("Name")
 # del split_result[0]
 # print(split_result)
@@ -20,6 +33,6 @@ print(result)
 # print(type(address))
 # test_arr = [address]
 # print(test_arr)
-# print(split_result)
+# print(split_result)source tutorial-env/bin/activate
 # print(result)
 # print(type(result))
