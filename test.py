@@ -8,16 +8,26 @@ import http
 # import scan
 # print(str(time.time()))
 
-result = subprocess.check_output(["curl", "-I", "--http2", "northwestern.edu"],
+result = subprocess.check_output(["curl", "-I", "--http2", "https://www.amazon.com"],
                                  timeout=2).decode("utf-8")
-print("result: ", result)
-split_result = result.split("Server: ")
-print(split_result)
-del split_result[0]
-server = split_result[0].split("\r\n")
-print(server)
-answer = server[0]
-print(answer)
+
+print(result)
+
+## Redirect_hst_helper
+# location_split = result.split("Location: ")
+# del location_split[0]
+# location = location_split[0].split("\r\n")
+# print(location)
+
+## http_server test code below
+# print("result: ", result)
+# split_result = result.split("Server: ")
+# print(split_result)
+# del split_result[0]
+# server = split_result[0].split("\r\n")
+# print(server)
+# answer = server[0]
+# print(answer)
 
 ## IPV6 test code below
 # result = subprocess.check_output(["nslookup", "-type=AAAA", "google.com", "8.8.8.8"],
