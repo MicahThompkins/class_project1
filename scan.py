@@ -91,19 +91,21 @@ class ScanClass:
         return ip_addys
 
     def http_server(self, url):
-
+        url = "http://"  + url
         try:
             result = subprocess.check_output(["curl", "-I", "--http2", url],
                                              timeout=timeout_num).decode("utf-8")
         except subprocess.TimeoutExpired:
             # print("timing out")
             # output_dictonary[url]["insecure_http"] = False
+            print("returning none after timeoutexpired in http: server: ", url)
             return None
         except subprocess.CalledProcessError:
             # print("calledProcesserror")
             # output_dictonary[url]["insecure_http"] = False
+            print("returning none after calledprocesserror in http: server: ", url)
             return None
-        print(result)
+        # print(result)
         self.result_to_pass = result
         split_result = result.split("Server: ")
         if len(split_result) == 1:
@@ -117,6 +119,7 @@ class ScanClass:
         return answer
 
     def insecure_http(self, url):
+        # print("self.result_to_pass: ", self.result_to_pass)
         if self.result_to_pass != "":
             self.result_to_pass = ""
             return True
@@ -125,6 +128,10 @@ class ScanClass:
             return False
 
     def redirect_to_https(self, url):
+        # if self.result_to_pass != "":
+        #     return True
+        # else:
+        # self.result_to_pass = ""
         return "test redirect"
 
     def hsts(self, url):
