@@ -96,11 +96,17 @@ def http_server(url):
                                          timeout=timeout_num).decode("utf-8")
     except subprocess.TimeoutExpired:
         # print("timing out")
-        return False
+        return None
     except subprocess.CalledProcessError:
         # print("calledProcesserror")
-        return False
+        return None
+    print(result)
     split_result = result.split("Server: ")
+    if len(split_result) == 1:
+        split_result = result.split("server: ")
+        if len(split_result) == 1:
+            #TODO check if this works specail json null
+            return None
     del split_result[0]
     server = split_result[0].split("\r\n")
     answer = server[0]
