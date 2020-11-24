@@ -2,20 +2,34 @@ import json
 import time
 import sys
 import subprocess
+# import scan
 # print(str(time.time()))
-result = subprocess.check_output(["nslookup", "-type=AAAA", "google.com", "8.8.8.8"],
+
+result = subprocess.check_output(["curl", "-I", "--http2", "northwestern.edu"],
                                  timeout=2).decode("utf-8")
-print(result)
-if "Can't find" in result:
-    print(True)
-else:
-    print(False)
-split_result = result.split("has AAAA address")
+print("result: ", result)
+split_result = result.split("Server: ")
 print(split_result)
 del split_result[0]
-address = split_result[0].split("\n")
-address[0] = address[0].strip()
-print(address)
+server = split_result[0].split("\r\n")
+print(server)
+answer = server[0]
+print(answer)
+
+## IPV6 test code below
+# result = subprocess.check_output(["nslookup", "-type=AAAA", "google.com", "8.8.8.8"],
+#                                  timeout=2).decode("utf-8")
+# print(result)
+# if "Can't find" in result:
+#     print(True)
+# else:
+#     print(False)
+# split_result = result.split("has AAAA address")
+# print(split_result)
+# del split_result[0]
+# address = split_result[0].split("\n")
+# address[0] = address[0].strip()
+# print(address)
 
 
 ## IPV4 test code below

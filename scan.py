@@ -6,12 +6,12 @@ import subprocess
 
 print("hello world")
 command_input = sys.argv
-
+timeout_num = 1
 input_file = str(command_input[1])
 output_file = str(command_input[2])
 
 print("after inout")
-
+# output_dictonary = {}
 def main(input_file, output_file):
     print("in main")
     file = open(input_file, 'r')
@@ -31,7 +31,7 @@ def scan(url):
     func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
     output_dictonary = {}
     for func in func_names:
-        output_dictonary[func] = eval(func + "('" +  url + "')")
+        output_dictonary[func] = eval(func + "('" + url + "')")
     return output_dictonary
     # TODO add try catch if command line tool missing and timeoutexpired
 
@@ -44,7 +44,7 @@ def ipv4_addresses(url):
     ip_addys = []
     for dns in dns_resolvers:
         try:
-            result = subprocess.check_output(["nslookup", url, dns], timeout=2).decode("utf-8")
+            result = subprocess.check_output(["nslookup", url, dns], timeout=timeout_num).decode("utf-8")
         except subprocess.TimeoutExpired:
             # print("timing out")
             continue
@@ -68,7 +68,7 @@ def ipv6_addresses(url):
     for dns in dns_resolvers:
         try:
             result = subprocess.check_output(["nslookup", "-type=AAAA", url, dns],
-                                             timeout=2).decode("utf-8")
+                                             timeout=timeout_num).decode("utf-8")
         except subprocess.TimeoutExpired:
             # print("timing out")
             continue
@@ -90,7 +90,21 @@ def ipv6_addresses(url):
 
 
 def http_server(url):
-    return "test http_ser"
+
+    try:
+        result = subprocess.check_output(["curl", "-I", "--http2", url],
+                                         timeout=timeout_num).decode("utf-8")
+    except subprocess.TimeoutExpired:
+        # print("timing out")
+        return False
+    except subprocess.CalledProcessError:
+        # print("calledProcesserror")
+        return False
+    split_result = result.split("Server: ")
+    del split_result[0]
+    server = split_result[0].split("\r\n")
+    answer = server[0]
+    return answer
 
 
 def insecure_http(url):
