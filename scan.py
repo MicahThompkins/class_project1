@@ -37,14 +37,22 @@ class ScanClass:
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
         output_dictonary = {}
         for func in func_names:
-            output_dictonary[func] = eval('self.' + func + "('" + url + "')")
+            try:
+                output_dictonary[func] = eval('self.' + func + "('" + url + "')")
+            except (FileNotFoundError, OSError) as e:
+                print("exception caught: ", e)
+                error_out = func + " is not able to run due to missing command line tool"
+                # print(error_out, file=sys.stderr)
+                sys.stderr.write(error_out)
+
+
         return output_dictonary
-        # TODO add try catch if command line tool missing and timeoutexpired
 
     def scan_time(self, url):
         return time.time()
 
     def ipv4_addresses(self, url):
+        #TODO https://campuswire.com/c/G1B33C150/feed/495
         dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
         ip_addys = []
         for dns in dns_resolvers:
@@ -112,7 +120,6 @@ class ScanClass:
         if len(split_result) == 1:
             split_result = result.split("server: ")
             if len(split_result) == 1:
-                #TODO check if this works specail json null
                 return None
         del split_result[0]
         server = split_result[0].split("\r\n")
@@ -164,6 +171,7 @@ class ScanClass:
         except subprocess.CalledProcessError:
             self.hsts_bool = False
             return False
+        #TODO add server header check and change
         if "strict-transport-security: " in result:
             self.hsts_bool = True
             return True
@@ -202,8 +210,48 @@ class ScanClass:
         else:
             return False
 
+    def tls_nmap_helper(self, result, return_arr, tls_ver):
+        split_result = result.split(tls_ver)
+        if len(split_result) > 1:
+            del split_result[0]
+            return_arr.append(tls_ver)
+            return split_result[0]
+        else:
+            return result
+
     def tls_versions(self, url):
-        return "test tls"
+        try:
+            result = subprocess.check_output(["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url],
+                                            timeout=5).decode("utf-8")
+        except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
+            # TODO figure out what to return if it fails
+            return None
+        tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
+        return_arr = []
+        if result != "":
+            for tls in tls_vers:
+                result = self.tls_nmap_helper(result, return_arr, tls)
+
+        # TODO implement tls1_3
+        # result = ""
+        # try:
+        #     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
+        #                                      timeout=2).decode("utf-8")
+        # except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+        #     result = str(e)
+        #     print("e:", e)
+        #
+        # print(result)
+        # if "returned non-zero exit status 1" in result:
+        #     print("it worked")
+        # else:
+        #     print("it didnt work")
+
+        if return_arr:
+            return return_arr
+        else:
+            return None
+
 
     def root_ca(self, url):
         return "test root"

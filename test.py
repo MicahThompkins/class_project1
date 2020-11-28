@@ -2,16 +2,57 @@ import json
 import time
 import sys
 import subprocess
-import requests
+# import requests
 import http
 
 # import scan
 # print(str(time.time()))
 
-result = subprocess.check_output(["curl", "-I", "--http2", "https://www.amazon.com"],
-                                 timeout=2).decode("utf-8")
+result = ""
+info = "echo | openssl s_client -tls1_3 -connect tls13.cloudflare.com:443"
+try:
+    result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
+                                    timeout=2).decode("utf-8")
+except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+    result = str(e)
+    print("e:", e)
+
 
 print(result)
+if "returned non-zero exit status 1" in result:
+    print("it worked")
+else:
+    print("it didnt work")
+
+## TLS_versions early
+# result = ""
+# command = "nmap --script ssl-enum-ciphers -p 443 reddit.com"
+#
+# try:
+#     result = subprocess.check_output(["nmap", "--script", "ssl-enum-ciphers", "-p", "443", "en.wikipedia.org"],
+#                                     timeout=10).decode("utf-8")
+# except (FileNotFoundError, OSError) as e:
+#     print("excepted: ", e)
+#
+# def tls_nmap_helper(result, return_arr, tls_ver):
+#     split_result = result.split(tls_ver)
+#     if len(split_result) > 1:
+#         del split_result[0]
+#         return_arr.append(tls_ver)
+#         return split_result[0]
+#     else:
+#         return result
+#
+# tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
+# if result != "":
+#     return_arr = []
+#     for tls in tls_vers:
+#         print("tls: ", tls)
+#         result = tls_nmap_helper(result, return_arr, tls)
+#     print("return_arr: ", return_arr)
+
+
+# print(result)
 
 ## Redirect_hst_helper
 # location_split = result.split("Location: ")
