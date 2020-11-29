@@ -35,12 +35,13 @@ class ScanClass:
 
     def scan(self, url):
         func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
-        func_names = ["scan_time", "ipv4_addresses", "rdns_names"]  # , "rdns_names"]
+        # func_names = ["scan_time", "ipv4_addresses", "rdns_names"]  # , "rdns_names"]
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
         # output_dictonary = {}
         # TODO make sure this output dictonary logic flows
         self.scan_output_dictonary = {}
         for func in func_names:
+            print(url, func)
             try:
                 self.scan_output_dictonary[func] = eval('self.' + func + "('" + url + "')")
             except (FileNotFoundError, OSError) as e:
@@ -274,7 +275,7 @@ class ScanClass:
         #
         #     return None
         args = ["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url]
-        result = self.subprocess_caller(args, 16)
+        result = self.subprocess_caller(args, 10)
         if result != "":
             tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
             return_arr = []
@@ -324,6 +325,9 @@ class ScanClass:
                     break
                 else:
                     count += 1
+                    continue
+            break
+
 
         if return_none:
             return None
