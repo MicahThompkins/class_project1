@@ -19,8 +19,9 @@ import http
 # input_arr = [5] * 10
 # print(input_arr)
 command = "openssl s_client -connect amazon.com:443"
+command_arr = ["openssl", "s_client", "-connect", "amazon.com:443"]
 try:
-    result = subprocess.check_output([command], input="", stderr=subprocess.STDOUT,
+    result = subprocess.check_output(command_arr, input = "", stderr=subprocess.STDOUT,
                                     timeout=5).decode("utf-8")
 except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
     result = str(e)

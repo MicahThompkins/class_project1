@@ -34,6 +34,7 @@ class ScanClass:
 
     def scan(self, url):
         func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
+        func_names = ["scan_time", "tls_versions"]
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
         output_dictonary = {}
         for func in func_names:
@@ -48,6 +49,29 @@ class ScanClass:
 
         return output_dictonary
 
+    def subprocess_caller(self, args, timeout_input):
+        result = ""
+        count = 0
+        while True:
+            try:
+                result = subprocess.check_output(args, timeout=timeout_input).decode("utf-8")
+            except subprocess.TimeoutExpired:
+                print("timing out for command: ", args[0], " at site: ", args[-1])
+                if count > 6:
+                    break
+                else:
+                    count += 1
+            except subprocess.CalledProcessError:
+                print("called_process_Error for command: ", args[0], "at site: ", args[-1])
+                if count > 6:
+                    break
+                else:
+                    count += 1
+            if result != "":
+                break
+        return result
+
+
     def scan_time(self, url):
         return time.time()
 
@@ -56,13 +80,19 @@ class ScanClass:
         dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
         ip_addys = []
         for dns in dns_resolvers:
-            try:
-                result = subprocess.check_output(["nslookup", url, dns], timeout=timeout_num).decode("utf-8")
-            except subprocess.TimeoutExpired:
-                # print("timing out")
-                continue
-            except subprocess.CalledProcessError:
-                # print("calledProcesserror")
+            # try:
+            #     result = subprocess.check_output(["nslookup", url, dns], timeout=timeout_num).decode("utf-8")
+            # except subprocess.TimeoutExpired:
+            #     # print("timing out")
+            #     continue
+            # except subprocess.CalledProcessError:
+            #     # print("calledProcesserror")
+            #     continue
+            # print("url, dns: ", url, dns)
+            args = ["nslookup", url, dns]
+
+            result = self.subprocess_caller(args, timeout_num)
+            if result == "":
                 continue
             split_result = result.split("Name")
             del split_result[0]
@@ -78,16 +108,18 @@ class ScanClass:
         dns_resolvers = ["208.67.222.222", "1.1.1.1", "8.8.8.8", "8.26.56.26", "9.9.9.9", "64.6.65.6", "91.239.100.100", "185.228.168.168", "77.88.8.7", "156.154.70.1", "198.101.242.72", "176.103.130.130"]
         ip_addys = []
         for dns in dns_resolvers:
-            try:
-                result = subprocess.check_output(["nslookup", "-type=AAAA", url, dns],
-                                                 timeout=timeout_num).decode("utf-8")
-            except subprocess.TimeoutExpired:
-                # print("timing out")
-                continue
-            except subprocess.CalledProcessError:
-                # print("calledProcesserror")
-                continue
-            if "Can't find" in result:
+            # try:
+            #     result = subprocess.check_output(["nslookup", "-type=AAAA", url, dns],
+            #                                      timeout=timeout_num).decode("utf-8")
+            # except subprocess.TimeoutExpired:
+            #     # print("timing out")
+            #     continue
+            # except subprocess.CalledProcessError:
+            #     # print("calledProcesserror")
+            #     continue
+            args = ["nslookup", "-type=AAAA", url, dns]
+            result = self.subprocess_caller(args, timeout_num)
+            if "Can't find" in result or result == "":
                 continue
             else:
                 split_result = result.split("has AAAA address")
@@ -102,30 +134,35 @@ class ScanClass:
     def http_server(self, url):
         # TODO https://campuswire.com/c/G1B33C150/feed/516
         url = "http://"  + url
-        try:
-            result = subprocess.check_output(["curl", "-I", "--http2", url],
-                                             timeout=timeout_num).decode("utf-8")
-        except subprocess.TimeoutExpired:
-            # print("timing out")
-            # output_dictonary[url]["insecure_http"] = False
-            print("returning none after timeoutexpired in http: server: ", url)
-            return None
-        except subprocess.CalledProcessError:
-            # print("calledProcesserror")
-            # output_dictonary[url]["insecure_http"] = False
-            print("returning none after calledprocesserror in http: server: ", url)
-            return None
-        # print(result)
-        self.result_to_pass = result
-        split_result = result.split("Server: ")
-        if len(split_result) == 1:
-            split_result = result.split("server: ")
+        # try:
+        #     result = subprocess.check_output(["curl", "-I", "--http2", url],
+        #                                      timeout=timeout_num).decode("utf-8")
+        # except subprocess.TimeoutExpired:
+        #     # print("timing out")
+        #     # output_dictonary[url]["insecure_http"] = False
+        #     print("returning none after timeoutexpired in http: server: ", url)
+        #     return None
+        # except subprocess.CalledProcessError:
+        #     # print("calledProcesserror")
+        #     # output_dictonary[url]["insecure_http"] = False
+        #     print("returning none after calledprocesserror in http: server: ", url)
+        #     return None
+        args = ["curl", "-I", "--http2", url]
+        result = self.subprocess_caller(args, timeout_num)
+        if result != "":
+            # print(result)
+            self.result_to_pass = result
+            split_result = result.split("Server: ")
             if len(split_result) == 1:
-                return None
-        del split_result[0]
-        server = split_result[0].split("\r\n")
-        answer = server[0]
-        return answer
+                split_result = result.split("server: ")
+                if len(split_result) == 1:
+                    return None
+            del split_result[0]
+            server = split_result[0].split("\r\n")
+            answer = server[0]
+            return answer
+        else:
+            return None
 
     def insecure_http(self, url):
         # print("self.result_to_pass: ", self.result_to_pass)
@@ -137,6 +174,7 @@ class ScanClass:
             return False
 
     def redirect_helper(self, location):
+        # TODO change to subprocess caller
         count = 1
         while count < 10:
             try:
@@ -163,6 +201,7 @@ class ScanClass:
                 return False
 
     def redirect_hsts_helper(self, url):
+        # TODO change to subprocess caller
         try:
             result = subprocess.check_output(["curl", "-I", "--http2", url],
                                              timeout=timeout_num).decode("utf-8")
@@ -178,6 +217,7 @@ class ScanClass:
             return True
 
     def redirect_to_https(self, url):
+        # TODO change to subprocess caller
         if self.result_to_pass != "":
             # TODO if 200 OK shows up elsewhere could find index of http and index of 200 ok and check to make sure distance is small
             if "200 OK" in self.result_to_pass:
@@ -221,41 +261,47 @@ class ScanClass:
             return result
 
     def tls_versions(self, url):
-        try:
-            result = subprocess.check_output(["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url],
-                                            timeout=5).decode("utf-8")
-        except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
-            # TODO figure out what to return if it fails
-            return None
-        tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
-        return_arr = []
-        if result != "":
-            for tls in tls_vers:
-                result = self.tls_nmap_helper(result, return_arr, tls)
 
-        # TODO implement tls1_3
-        # result = ""
         # try:
-        #     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
-        #                                      timeout=2).decode("utf-8")
-        # except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-        #     result = str(e)
-        #     print("e:", e)
-        #
-        # print(result)
-        # if "returned non-zero exit status 1" in result:
-        #     print("it worked")
-        # else:
-        #     print("it didnt work")
+        #     result = subprocess.check_output(["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url],
+        #                                     timeout=5).decode("utf-8")
+        # except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
+        #     # TODO figure out what to return if it fails
+        #     return None
+        args = ["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url]
+        result = self.subprocess_caller(args, 5)
+        if result != "":
+            tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
+            return_arr = []
+            if result != "":
+                for tls in tls_vers:
+                    result = self.tls_nmap_helper(result, return_arr, tls)
 
-        if return_arr:
-            return return_arr
+            # TODO implement tls1_3
+            # result = ""
+            # try:
+            #     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
+            #                                      timeout=2).decode("utf-8")
+            # except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+            #     result = str(e)
+            #     print("e:", e)
+            #
+            # print(result)
+            # if "returned non-zero exit status 1" in result:
+            #     print("it worked")
+            # else:
+            #     print("it didnt work")
+
+            if return_arr:
+                return return_arr
+            else:
+                return None
         else:
             return None
 
-
     def root_ca(self, url):
         input_url = url + ":443"
+        # TODO if it just hangs without timing out try adding shell=True
         try:
             result = subprocess.check_output(["openssl", "s_client", "-connect", input_url], input="",
                                              stderr=subprocess.STDOUT,
