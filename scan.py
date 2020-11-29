@@ -5,7 +5,7 @@ import subprocess
 
 print("hello world")
 command_input = sys.argv
-timeout_num = 1
+timeout_num = 2
 input_file = str(command_input[1])
 output_file = str(command_input[2])
 
@@ -19,51 +19,57 @@ class ScanClass:
         print("in main")
         file = open(input_file, 'r')
         file_lines = file.readlines()
-        output_dictonary = {}
+        self.output_dictonary = {}
+        self.scan_output_dictonary = {}
         self.result_to_pass = ""
         self.hsts_bool = False
         for line in file_lines:
             line = line.rstrip()
             output = self.scan(line)
-            output_dictonary[line] = output
+            self.output_dictonary[line] = output
         file.close()
         with open(output_file, 'w') as f:
-            json.dump(output_dictonary, f, sort_keys=False, indent=4)
+            json.dump(self.output_dictonary, f, sort_keys=False, indent=4)
             f.close()
 
 
     def scan(self, url):
         func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
-        func_names = ["scan_time", "tls_versions"]
+        func_names = ["scan_time", "ipv4_addresses", "rdns_names"]  # , "rdns_names"]
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
-        output_dictonary = {}
+        # output_dictonary = {}
+        # TODO make sure this output dictonary logic flows
+        self.scan_output_dictonary = {}
         for func in func_names:
             try:
-                output_dictonary[func] = eval('self.' + func + "('" + url + "')")
+                self.scan_output_dictonary[func] = eval('self.' + func + "('" + url + "')")
             except (FileNotFoundError, OSError) as e:
                 print("exception caught: ", e)
                 error_out = func + " is not able to run due to missing command line tool"
                 # print(error_out, file=sys.stderr)
                 sys.stderr.write(error_out)
-
-
-        return output_dictonary
+        return self.scan_output_dictonary
 
     def subprocess_caller(self, args, timeout_input):
         result = ""
         count = 0
+        # TODO if slow add this code for rdns_names: but should be fine
+        # if "server can't find" in str(e.output):
+        #     print("it worked")
         while True:
             try:
                 result = subprocess.check_output(args, timeout=timeout_input).decode("utf-8")
-            except subprocess.TimeoutExpired:
-                print("timing out for command: ", args[0], " at site: ", args[-1])
-                if count > 6:
+            except subprocess.TimeoutExpired as e:
+                # print("timing out for command: ", args[0], " at site: ", args[-1])
+                # print(e)
+                if count > 1:
                     break
                 else:
                     count += 1
-            except subprocess.CalledProcessError:
-                print("called_process_Error for command: ", args[0], "at site: ", args[-1])
-                if count > 6:
+            except subprocess.CalledProcessError as e:
+                # print("called_process_Error for command: ", args[0], "at site: ", args[-1])
+                # print(e)
+                if count > 1:
                     break
                 else:
                     count += 1
@@ -90,7 +96,6 @@ class ScanClass:
             #     continue
             # print("url, dns: ", url, dns)
             args = ["nslookup", url, dns]
-
             result = self.subprocess_caller(args, timeout_num)
             if result == "":
                 continue
@@ -261,15 +266,16 @@ class ScanClass:
             return result
 
     def tls_versions(self, url):
-
+        # TODO for spacejam, auditoryneuroscience.com figure out timeout issue, 16 seconds not enough, either false
+        # TODO or use openssl on all 4
         # try:
         #     result = subprocess.check_output(["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url],
         #                                     timeout=5).decode("utf-8")
         # except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
-        #     # TODO figure out what to return if it fails
+        #
         #     return None
         args = ["nmap", "--script", "ssl-enum-ciphers", "-p", "443", url]
-        result = self.subprocess_caller(args, 5)
+        result = self.subprocess_caller(args, 16)
         if result != "":
             tls_vers = ["TLSv1.0", "TLSv1.1", "TLSv1.2"]
             return_arr = []
@@ -302,16 +308,26 @@ class ScanClass:
     def root_ca(self, url):
         input_url = url + ":443"
         # TODO if it just hangs without timing out try adding shell=True
-        try:
-            result = subprocess.check_output(["openssl", "s_client", "-connect", input_url], input="",
-                                             stderr=subprocess.STDOUT,
-                                             timeout=5).decode("utf-8")
-        except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-            # result = str(e)
-            print("e:", e)
-            # print(e.output)
-            return None
+        count = 0
+        return_none = False
+        while True:
+            try:
+                result = subprocess.check_output(["openssl", "s_client", "-connect", input_url], input="",
+                                                 stderr=subprocess.STDOUT,
+                                                 timeout=timeout_num).decode("utf-8")
+            except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+                # result = str(e)
+                print("e:", e)
+                if count > 1:
+                    print("failed thrice root_Ca, url: ", url)
+                # print(e.output)
+                    return_none = True
+                    break
+                else:
+                    count += 1
 
+        if return_none:
+            return None
         # print("result: \n", result)
         root_ca = False
         split_result = result.split("O = ")
@@ -327,11 +343,29 @@ class ScanClass:
         if root_ca:
             return root_ca
         else:
-
             return None
 
     def rdns_names(self, url):
-        return "test rdns"
+        ip4_addys = self.scan_output_dictonary["ipv4_addresses"]
+        rdns_names_arr = []
+        for addy in ip4_addys:
+            args = ["nslookup", "-type=PTR", addy]
+            result = self.subprocess_caller(args, timeout_num)
+            if result != "":
+                split_result = result.split("name = ")
+                if len(split_result) > 1:
+                    del split_result[0]
+                    name_split = split_result[0].split("\n\n")
+                    name = name_split[0]
+                    if name[-1] == ".":
+                        name = name[:-1]
+                        rdns_names_arr.append(name)
+        if rdns_names_arr:
+            return rdns_names_arr
+        else:
+            #TODO check answer to my question on campuswire
+            return None
+
 
     def rtt_range(self, url):
         return "test rtt"

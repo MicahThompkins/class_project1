@@ -8,6 +8,33 @@ import http
 # import scan
 # print(str(time.time()))
 
+face_book_ip4s = ["157.240.18.35", "157.240.2.35", "69.171.250.35", "31.13.67.35", "157.240.195.35", "157.240.1.35"]
+steve = "54.245.121.172"
+error_addy = "104.28.4.211"
+command_arr = ["nslookup", "-type=PTR", error_addy]
+
+result = ""
+try:
+    result = subprocess.check_output(command_arr,
+                                     stderr = subprocess.STDOUT, timeout=2).decode("utf-8")
+except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+    result = str(e)
+    print("e:", e)
+    print(e.output)
+    if "server can't find" in str(e.output):
+        print("it worked")
+if result != "":
+    print(result)
+    split_result = result.split("name = ")
+    print(split_result)
+    if len(split_result) > 1:
+        del split_result[0]
+        name_split = split_result[0].split("\n\n")
+        name = name_split[0]
+        if name[-1] == ".":
+            name = name[:-1]
+            print(name)
+
 #NEED to get last line
 
 # Certificate chain
@@ -18,28 +45,30 @@ import http
 
 # input_arr = [5] * 10
 # print(input_arr)
-command = "openssl s_client -connect amazon.com:443"
-command_arr = ["openssl", "s_client", "-connect", "amazon.com:443"]
-try:
-    result = subprocess.check_output(command_arr, input = "", stderr=subprocess.STDOUT,
-                                    timeout=5).decode("utf-8")
-except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-    result = str(e)
-    print("e:", e)
-    print(e.output)
 
-
-
-print("result: \n", result)
-split_result = result.split("O = ")
-if len(split_result) > 1:
-    del split_result[0]
-    root_ca_split1 = split_result[0].split("CN = ")
-    root_ca_split = root_ca_split1[0].split("OU = ")
-    root_ca_first = root_ca_split[0]
-    index_of_last_comma = root_ca_first.rfind(",")
-    root_ca = root_ca_first[:index_of_last_comma]
-    print("Root CA: ", root_ca)
+## ROOT_CA stuff
+# command = "openssl s_client -connect amazon.com:443"
+# command_arr = ["openssl", "s_client", "-connect", "amazon.com:443"]
+# try:
+#     result = subprocess.check_output(command_arr, input = "", stderr=subprocess.STDOUT,
+#                                     timeout=5).decode("utf-8")
+# except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+#     result = str(e)
+#     print("e:", e)
+#     print(e.output)
+#
+#
+#
+# print("result: \n", result)
+# split_result = result.split("O = ")
+# if len(split_result) > 1:
+#     del split_result[0]
+#     root_ca_split1 = split_result[0].split("CN = ")
+#     root_ca_split = root_ca_split1[0].split("OU = ")
+#     root_ca_first = root_ca_split[0]
+#     index_of_last_comma = root_ca_first.rfind(",")
+#     root_ca = root_ca_first[:index_of_last_comma]
+#     print("Root CA: ", root_ca)
 
 ## TLS versions 1_3
 # result = ""
