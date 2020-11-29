@@ -8,32 +8,33 @@ import http
 # import scan
 # print(str(time.time()))
 
-face_book_ip4s = ["157.240.18.35", "157.240.2.35", "69.171.250.35", "31.13.67.35", "157.240.195.35", "157.240.1.35"]
-steve = "54.245.121.172"
-error_addy = "104.28.4.211"
-command_arr = ["nslookup", "-type=PTR", error_addy]
-
-result = ""
-try:
-    result = subprocess.check_output(command_arr,
-                                     stderr = subprocess.STDOUT, timeout=2).decode("utf-8")
-except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-    result = str(e)
-    print("e:", e)
-    print(e.output)
-    if "server can't find" in str(e.output):
-        print("it worked")
-if result != "":
-    print(result)
-    split_result = result.split("name = ")
-    print(split_result)
-    if len(split_result) > 1:
-        del split_result[0]
-        name_split = split_result[0].split("\n\n")
-        name = name_split[0]
-        if name[-1] == ".":
-            name = name[:-1]
-            print(name)
+## rdns_names done
+# face_book_ip4s = ["157.240.18.35", "157.240.2.35", "69.171.250.35", "31.13.67.35", "157.240.195.35", "157.240.1.35"]
+# steve = "54.245.121.172"
+# error_addy = "104.28.4.211"
+# command_arr = ["nslookup", "-type=PTR", error_addy]
+#
+# result = ""
+# try:
+#     result = subprocess.check_output(command_arr,
+#                                      stderr = subprocess.STDOUT, timeout=2).decode("utf-8")
+# except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+#     result = str(e)
+#     print("e:", e)
+#     print(e.output)
+#     if "server can't find" in str(e.output):
+#         print("it worked")
+# if result != "":
+#     print(result)
+#     split_result = result.split("name = ")
+#     print(split_result)
+#     if len(split_result) > 1:
+#         del split_result[0]
+#         name_split = split_result[0].split("\n\n")
+#         name = name_split[0]
+#         if name[-1] == ".":
+#             name = name[:-1]
+#             print(name)
 
 #NEED to get last line
 
