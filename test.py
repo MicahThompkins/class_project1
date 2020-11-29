@@ -8,21 +8,54 @@ import http
 # import scan
 # print(str(time.time()))
 
-result = ""
-info = "echo | openssl s_client -tls1_3 -connect tls13.cloudflare.com:443"
+#NEED to get last line
+
+# Certificate chain
+#  0 s:/CN=stevetarzia.com
+#    i:/C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+#  1 s:/C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+#    i:/O=Digital Signature Trust Co./CN=DST Root CA X3
+
+# input_arr = [5] * 10
+# print(input_arr)
+command = "openssl s_client -connect amazon.com:443"
 try:
-    result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
-                                    timeout=2).decode("utf-8")
+    result = subprocess.check_output([command], input="", stderr=subprocess.STDOUT,
+                                    timeout=5).decode("utf-8")
 except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
     result = str(e)
     print("e:", e)
+    print(e.output)
 
 
-print(result)
-if "returned non-zero exit status 1" in result:
-    print("it worked")
-else:
-    print("it didnt work")
+
+print("result: \n", result)
+split_result = result.split("O = ")
+if len(split_result) > 1:
+    del split_result[0]
+    root_ca_split1 = split_result[0].split("CN = ")
+    root_ca_split = root_ca_split1[0].split("OU = ")
+    root_ca_first = root_ca_split[0]
+    index_of_last_comma = root_ca_first.rfind(",")
+    root_ca = root_ca_first[:index_of_last_comma]
+    print("Root CA: ", root_ca)
+
+## TLS versions 1_3
+# result = ""
+# info = "echo | openssl s_client -tls1_3 -connect tls13.cloudflare.com:443"
+# try:
+#     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
+#                                     timeout=2).decode("utf-8")
+# except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+#     result = str(e)
+#     print("e:", e)
+#
+#
+# print(result)
+# if "returned non-zero exit status 1" in result:
+#     print("it worked")
+# else:
+#     print("it didnt work")
 
 ## TLS_versions early
 # result = ""

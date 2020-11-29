@@ -100,6 +100,7 @@ class ScanClass:
         return ip_addys
 
     def http_server(self, url):
+        # TODO https://campuswire.com/c/G1B33C150/feed/516
         url = "http://"  + url
         try:
             result = subprocess.check_output(["curl", "-I", "--http2", url],
@@ -254,7 +255,34 @@ class ScanClass:
 
 
     def root_ca(self, url):
-        return "test root"
+        input_url = url + ":443"
+        try:
+            result = subprocess.check_output(["openssl", "s_client", "-connect", input_url], input="",
+                                             stderr=subprocess.STDOUT,
+                                             timeout=5).decode("utf-8")
+        except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+            # result = str(e)
+            print("e:", e)
+            # print(e.output)
+            return None
+
+        # print("result: \n", result)
+        root_ca = False
+        split_result = result.split("O = ")
+        if len(split_result) > 1:
+            del split_result[0]
+            root_ca_split1 = split_result[0].split("CN = ")
+            root_ca_split = root_ca_split1[0].split("OU = ")
+            root_ca_first = root_ca_split[0]
+            index_of_last_comma = root_ca_first.rfind(",")
+            root_ca = root_ca_first[:index_of_last_comma]
+            # print("Root CA: ", root_ca)
+        print("root_ca: ", root_ca)
+        if root_ca:
+            return root_ca
+        else:
+
+            return None
 
     def rdns_names(self, url):
         return "test rdns"
