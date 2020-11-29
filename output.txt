@@ -1,137 +1,182 @@
 {
     "youtube.com": {
-        "scan_time": 1606617816.6512399,
-        "http_server": "YouTube Frontend Proxy",
-        "insecure_http": true
+        "scan_time": 1606618459.833107,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "en.wikipedia.org": {
-        "scan_time": 1606617816.707963,
-        "http_server": "Varnish",
-        "insecure_http": true
+        "scan_time": 1606618461.739659,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "twitter.com": {
-        "scan_time": 1606617816.8029702,
-        "http_server": "tsa_b",
-        "insecure_http": true
+        "scan_time": 1606618463.660836,
+        "tls_versions": null
     },
     "facebook.com": {
-        "scan_time": 1606617816.911712,
-        "http_server": null,
-        "insecure_http": true
+        "scan_time": 1606618503.732188,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "amazon.com": {
-        "scan_time": 1606617817.066408,
-        "http_server": "Server",
-        "insecure_http": true
+        "scan_time": 1606618506.5591161,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "yelp.com": {
-        "scan_time": 1606617817.161109,
-        "http_server": "Varnish",
-        "insecure_http": true
+        "scan_time": 1606618509.446122,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "reddit.com": {
-        "scan_time": 1606617817.205121,
-        "http_server": "snooserv",
-        "insecure_http": true
+        "scan_time": 1606618511.299367,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "imdb.com": {
-        "scan_time": 1606617817.243443,
-        "http_server": "Server",
-        "insecure_http": true
+        "scan_time": 1606618513.107284,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "fandom.com": {
-        "scan_time": 1606617817.336998,
-        "http_server": "Varnish",
-        "insecure_http": true
+        "scan_time": 1606618515.964503,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "pinterest.com": {
-        "scan_time": 1606617817.390354,
-        "http_server": null,
-        "insecure_http": true
+        "scan_time": 1606618517.289665,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "tripadvisor.com": {
-        "scan_time": 1606617817.4487529,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618519.061126,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "instagram.com": {
-        "scan_time": 1606617817.607753,
-        "http_server": "proxygen-bolt",
-        "insecure_http": true
+        "scan_time": 1606618521.933663,
+        "tls_versions": null
     },
     "walmart.com": {
-        "scan_time": 1606617817.730597,
-        "http_server": null,
-        "insecure_http": true
+        "scan_time": 1606618562.0024881,
+        "tls_versions": [
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "northwestern.edu": {
-        "scan_time": 1606617817.834961,
-        "http_server": "BigIP",
-        "insecure_http": true
+        "scan_time": 1606618565.863025,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1606617817.913701,
-        "http_server": "Apache/2.4.7 (Ubuntu)",
-        "insecure_http": true
+        "scan_time": 1606618575.530058,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1606617818.037266,
-        "http_server": "Microsoft-IIS/10.0",
-        "insecure_http": true
+        "scan_time": 1606618578.965368,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1606617818.093496,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618581.411208,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "uchicago.edu": {
-        "scan_time": 1606617818.146334,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618584.016979,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "illinois.edu": {
-        "scan_time": 1606617818.238035,
-        "http_server": "Apache/2.2.15 (Red Hat) mod_ssl/2.2.15 OpenSSL/1.0.1e-fips",
-        "insecure_http": true
+        "scan_time": 1606618587.979645,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "stevetarzia.com": {
-        "scan_time": 1606617818.2869298,
-        "http_server": "Apache/2.2.34 (Amazon)",
-        "insecure_http": true
+        "scan_time": 1606618591.8265119,
+        "tls_versions": null
     },
     "clocktab.com": {
-        "scan_time": 1606617818.469229,
-        "http_server": "cloudflare",
-        "insecure_http": true
+        "scan_time": 1606618631.894721,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "auditoryneuroscience.com": {
-        "scan_time": 1606617818.542965,
-        "http_server": "Apache/2.4.29 (Ubuntu)",
-        "insecure_http": true
+        "scan_time": 1606618633.269343,
+        "tls_versions": null
     },
     "asee.org": {
-        "scan_time": 1606617819.014907,
-        "http_server": "Apache/2.4.7 (Ubuntu)",
-        "insecure_http": true
+        "scan_time": 1606618673.336117,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "gradeinflation.com": {
-        "scan_time": 1606617819.119145,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618676.669662,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "spacejam.com": {
-        "scan_time": 1606617819.206014,
-        "http_server": "Apache/2.4.43 () OpenSSL/1.0.2k-fips",
-        "insecure_http": true
+        "scan_time": 1606618678.6645691,
+        "tls_versions": [
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "pmichaud.com": {
-        "scan_time": 1606617819.2845361,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618681.486764,
+        "tls_versions": [
+            "TLSv1.2"
+        ]
     },
     "kli.org": {
-        "scan_time": 1606617819.528529,
-        "http_server": "Apache",
-        "insecure_http": true
+        "scan_time": 1606618685.8895931,
+        "tls_versions": null
     }
 }
