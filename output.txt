@@ -1,441 +1,200 @@
 {
     "youtube.com": {
-        "scan_time": 1606680537.816841,
-        "ipv4_addresses": [
-            "216.58.192.142",
-            "172.217.6.110",
-            "172.217.9.78",
-            "172.217.12.78",
-            "172.217.4.110",
-            "172.217.10.110",
-            "216.58.214.238",
-            "172.217.5.14",
-            "64.233.162.91",
-            "64.233.162.190",
-            "64.233.162.136",
-            "64.233.162.93",
-            "142.250.64.78",
-            "172.217.13.238",
-            "216.58.208.110"
-        ],
-        "rdns_names": [
-            "ord38s09-in-f14.1e100.net",
-            "dfw28s05-in-f14.1e100.net",
-            "lga34s15-in-f14.1e100.net",
-            "li-in-f91.1e100.net",
-            "li-in-f190.1e100.net",
-            "li-in-f136.1e100.net",
-            "li-in-f93.1e100.net",
-            "lga34s30-in-f14.1e100.net",
-            "iad23s61-in-f14.1e100.net"
+        "scan_time": 1606784425.695443,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "en.wikipedia.org": {
-        "scan_time": 1606680541.290804,
-        "ipv4_addresses": [
-            "208.80.154.224",
-            "91.198.174.192"
-        ],
-        "rdns_names": [
-            "text-lb.eqiad.wikimedia.org",
-            "text-lb.esams.wikimedia.org"
+        "scan_time": 1606784429.650101,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "twitter.com": {
-        "scan_time": 1606680542.5262332,
-        "ipv4_addresses": [
-            "104.244.42.1",
-            "104.244.42.193",
-            "104.244.42.129",
-            "104.244.42.65"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784433.727903,
+        "tls_versions": []
     },
     "facebook.com": {
-        "scan_time": 1606680565.8319051,
-        "ipv4_addresses": [
-            "157.240.18.35",
-            "157.240.2.35",
-            "69.171.250.35",
-            "31.13.67.35",
-            "157.240.195.35",
-            "31.13.66.35",
-            "157.240.1.35"
-        ],
-        "rdns_names": [
-            "edge-star-mini-shv-02-ort2.facebook.com",
-            "edge-star-mini-shv-01-ort2.facebook.com",
-            "edge-star-mini-shv-01-any2.facebook.com",
-            "edge-star-mini-shv-01-mia3.facebook.com",
-            "edge-star-mini-shv-01-mrs2.facebook.com",
-            "edge-star-mini-shv-01-iad3.facebook.com",
-            "edge-star-mini-shv-01-lht6.facebook.com"
+        "scan_time": 1606784463.755004,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "amazon.com": {
-        "scan_time": 1606680566.7885492,
-        "ipv4_addresses": [
-            "176.32.98.166",
-            "176.32.103.205",
-            "205.251.242.103"
-        ],
-        "rdns_names": [
-            "s3-console-us-standard.console.aws.amazon.com"
+        "scan_time": 1606784468.309529,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
         ]
     },
     "yelp.com": {
-        "scan_time": 1606680567.796292,
-        "ipv4_addresses": [
-            "199.232.76.116",
-            "151.101.68.116",
-            "151.101.76.116",
-            "199.232.64.116",
-            "151.101.244.116",
-            "151.101.36.116",
-            "199.232.8.116",
-            "199.232.36.116"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784471.247575,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
+        ]
     },
     "reddit.com": {
-        "scan_time": 1606680569.7195468,
-        "ipv4_addresses": [
-            "151.101.65.140",
-            "151.101.129.140",
-            "151.101.193.140",
-            "151.101.1.140"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784475.158345,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "imdb.com": {
-        "scan_time": 1606680571.104664,
-        "ipv4_addresses": [
-            "52.94.225.248",
-            "52.94.228.167",
-            "52.94.237.74"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784477.4389381,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "fandom.com": {
-        "scan_time": 1606680572.174289,
-        "ipv4_addresses": [
-            "151.101.128.194",
-            "151.101.192.194",
-            "151.101.0.194",
-            "151.101.64.194"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784480.36153,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
+        ]
     },
     "pinterest.com": {
-        "scan_time": 1606680573.497472,
-        "ipv4_addresses": [
-            "151.101.128.84",
-            "151.101.192.84",
-            "151.101.0.84",
-            "151.101.64.84"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784483.559131,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "tripadvisor.com": {
-        "scan_time": 1606680574.686662,
-        "ipv4_addresses": [
-            "192.229.162.112",
-            "192.229.182.112",
-            "192.229.189.15"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784485.5561862,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
+        ]
     },
     "instagram.com": {
-        "scan_time": 1606680575.760978,
-        "ipv4_addresses": [
-            "3.218.3.143",
-            "34.195.3.186",
-            "34.196.209.8",
-            "34.206.62.254",
-            "34.227.122.11",
-            "34.235.180.162",
-            "52.0.37.128",
-            "54.210.133.45",
-            "52.1.109.248",
-            "52.0.38.13",
-            "3.222.43.26",
-            "34.227.133.179",
-            "54.145.49.123",
-            "52.71.211.145",
-            "52.72.191.48",
-            "52.207.95.49",
-            "52.23.131.79",
-            "3.223.111.137",
-            "35.172.167.44",
-            "34.238.173.81",
-            "52.1.124.13",
-            "52.5.220.246",
-            "34.197.66.165",
-            "54.165.214.173",
-            "54.172.200.155",
-            "52.1.230.205",
-            "52.3.18.154",
-            "3.226.96.24",
-            "52.5.39.111",
-            "3.232.148.177",
-            "18.235.93.155",
-            "52.6.191.0",
-            "3.210.81.177",
-            "3.225.109.3",
-            "52.2.150.28",
-            "54.156.178.64",
-            "52.2.169.197",
-            "52.71.154.102",
-            "34.239.39.134",
-            "3.208.195.159",
-            "3.218.162.209",
-            "34.195.97.235",
-            "52.73.139.89",
-            "52.2.164.38",
-            "3.223.116.9",
-            "35.153.214.22",
-            "3.211.190.38",
-            "3.228.78.219",
-            "3.226.99.60",
-            "34.228.93.200",
-            "18.214.150.8",
-            "54.235.179.196",
-            "52.0.135.38",
-            "35.170.160.105",
-            "3.209.3.232",
-            "52.200.54.57",
-            "52.45.116.207",
-            "52.0.103.197",
-            "52.5.199.160",
-            "54.81.80.189",
-            "34.192.66.106",
-            "34.230.186.253",
-            "3.208.218.29",
-            "35.173.166.200",
-            "54.85.7.239",
-            "52.201.106.96",
-            "35.168.171.252",
-            "3.211.195.191",
-            "3.92.105.183",
-            "52.72.197.223",
-            "34.192.95.2",
-            "34.192.140.205",
-            "34.227.187.18",
-            "34.194.88.13",
-            "52.71.109.30",
-            "52.202.74.127",
-            "54.165.4.42"
-        ],
-        "rdns_names": [
-            "ec2-3-218-3-143.compute-1.amazonaws.com",
-            "ec2-34-195-3-186.compute-1.amazonaws.com",
-            "ec2-34-196-209-8.compute-1.amazonaws.com",
-            "ec2-34-206-62-254.compute-1.amazonaws.com",
-            "ec2-34-227-122-11.compute-1.amazonaws.com",
-            "ec2-34-235-180-162.compute-1.amazonaws.com",
-            "ec2-52-0-37-128.compute-1.amazonaws.com",
-            "ec2-54-210-133-45.compute-1.amazonaws.com",
-            "ec2-52-1-109-248.compute-1.amazonaws.com",
-            "ec2-52-0-38-13.compute-1.amazonaws.com",
-            "ec2-3-222-43-26.compute-1.amazonaws.com",
-            "ec2-34-227-133-179.compute-1.amazonaws.com",
-            "ec2-54-145-49-123.compute-1.amazonaws.com",
-            "ec2-52-71-211-145.compute-1.amazonaws.com",
-            "ec2-52-72-191-48.compute-1.amazonaws.com",
-            "ec2-52-207-95-49.compute-1.amazonaws.com",
-            "ec2-52-23-131-79.compute-1.amazonaws.com",
-            "ec2-3-223-111-137.compute-1.amazonaws.com",
-            "ec2-35-172-167-44.compute-1.amazonaws.com",
-            "ec2-34-238-173-81.compute-1.amazonaws.com",
-            "ec2-52-1-124-13.compute-1.amazonaws.com",
-            "ec2-52-5-220-246.compute-1.amazonaws.com",
-            "ec2-34-197-66-165.compute-1.amazonaws.com",
-            "ec2-54-165-214-173.compute-1.amazonaws.com",
-            "ec2-54-172-200-155.compute-1.amazonaws.com",
-            "ec2-52-1-230-205.compute-1.amazonaws.com",
-            "ec2-52-3-18-154.compute-1.amazonaws.com",
-            "ec2-3-226-96-24.compute-1.amazonaws.com",
-            "ec2-52-5-39-111.compute-1.amazonaws.com",
-            "ec2-3-232-148-177.compute-1.amazonaws.com",
-            "ec2-18-235-93-155.compute-1.amazonaws.com",
-            "ec2-52-6-191-0.compute-1.amazonaws.com",
-            "ec2-3-210-81-177.compute-1.amazonaws.com",
-            "ec2-3-225-109-3.compute-1.amazonaws.com",
-            "ec2-52-2-150-28.compute-1.amazonaws.com",
-            "ec2-54-156-178-64.compute-1.amazonaws.com",
-            "ec2-52-2-169-197.compute-1.amazonaws.com",
-            "ec2-52-71-154-102.compute-1.amazonaws.com",
-            "ec2-34-239-39-134.compute-1.amazonaws.com",
-            "ec2-3-208-195-159.compute-1.amazonaws.com",
-            "ec2-3-218-162-209.compute-1.amazonaws.com",
-            "ec2-34-195-97-235.compute-1.amazonaws.com",
-            "ec2-52-73-139-89.compute-1.amazonaws.com",
-            "ec2-52-2-164-38.compute-1.amazonaws.com",
-            "ec2-3-223-116-9.compute-1.amazonaws.com",
-            "ec2-35-153-214-22.compute-1.amazonaws.com",
-            "ec2-3-211-190-38.compute-1.amazonaws.com",
-            "ec2-3-228-78-219.compute-1.amazonaws.com",
-            "ec2-3-226-99-60.compute-1.amazonaws.com",
-            "ec2-34-228-93-200.compute-1.amazonaws.com",
-            "ec2-18-214-150-8.compute-1.amazonaws.com",
-            "ec2-54-235-179-196.compute-1.amazonaws.com",
-            "ec2-52-0-135-38.compute-1.amazonaws.com",
-            "ec2-35-170-160-105.compute-1.amazonaws.com",
-            "ec2-3-209-3-232.compute-1.amazonaws.com",
-            "ec2-52-200-54-57.compute-1.amazonaws.com",
-            "ec2-52-45-116-207.compute-1.amazonaws.com",
-            "ec2-52-0-103-197.compute-1.amazonaws.com",
-            "ec2-52-5-199-160.compute-1.amazonaws.com",
-            "ec2-54-81-80-189.compute-1.amazonaws.com",
-            "ec2-34-192-66-106.compute-1.amazonaws.com",
-            "ec2-34-230-186-253.compute-1.amazonaws.com",
-            "ec2-3-208-218-29.compute-1.amazonaws.com",
-            "ec2-35-173-166-200.compute-1.amazonaws.com",
-            "ec2-54-85-7-239.compute-1.amazonaws.com",
-            "ec2-52-201-106-96.compute-1.amazonaws.com",
-            "ec2-35-168-171-252.compute-1.amazonaws.com",
-            "ec2-3-211-195-191.compute-1.amazonaws.com",
-            "ec2-3-92-105-183.compute-1.amazonaws.com",
-            "ec2-52-72-197-223.compute-1.amazonaws.com",
-            "ec2-34-192-95-2.compute-1.amazonaws.com",
-            "ec2-34-192-140-205.compute-1.amazonaws.com",
-            "ec2-34-227-187-18.compute-1.amazonaws.com",
-            "ec2-34-194-88-13.compute-1.amazonaws.com",
-            "ec2-52-71-109-30.compute-1.amazonaws.com",
-            "ec2-52-202-74-127.compute-1.amazonaws.com",
-            "ec2-54-165-4-42.compute-1.amazonaws.com"
+        "scan_time": 1606784500.4011068,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "walmart.com": {
-        "scan_time": 1606680578.9028711,
-        "ipv4_addresses": [
-            "161.170.232.170",
-            "161.170.230.170"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784508.401574,
+        "tls_versions": [
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "northwestern.edu": {
-        "scan_time": 1606680580.4014988,
-        "ipv4_addresses": [
-            "129.105.136.48"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784512.334123,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1606680581.566634,
-        "ipv4_addresses": [
-            "129.105.1.129"
-        ],
-        "rdns_names": [
-            "mccormick.northwestern.edu"
+        "scan_time": 1606784517.515986,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
         ]
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1606680582.4631271,
-        "ipv4_addresses": [
-            "165.124.147.150"
-        ],
-        "rdns_names": null
+        "scan_time": 1606784520.9299579,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1606680583.233133,
-        "ipv4_addresses": [
-            "165.124.180.20"
-        ],
-        "rdns_names": [
-            "web1.cs.northwestern.edu"
+        "scan_time": 1606784526.169325,
+        "tls_versions": [
+            "TLSv1.2"
         ]
     },
     "uchicago.edu": {
-        "scan_time": 1606680583.9537652,
-        "ipv4_addresses": [
-            "34.200.129.209"
-        ],
-        "rdns_names": [
-            "ec2-34-200-129-209.compute-1.amazonaws.com"
+        "scan_time": 1606784529.216547,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "illinois.edu": {
-        "scan_time": 1606680584.8922932,
-        "ipv4_addresses": [
-            "192.17.172.3"
-        ],
-        "rdns_names": [
-            "tardis.techservices.illinois.edu"
+        "scan_time": 1606784535.107071,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
         ]
     },
     "stevetarzia.com": {
-        "scan_time": 1606680586.279608,
-        "ipv4_addresses": [
-            "54.245.121.172"
-        ],
-        "rdns_names": [
-            "grits.stevetarzia.com"
+        "scan_time": 1606784539.1898398,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
         ]
     },
     "clocktab.com": {
-        "scan_time": 1606680587.045953,
-        "ipv4_addresses": [
-            "104.28.4.211",
-            "104.28.5.211",
-            "172.67.170.56"
-        ],
-        "rdns_names": null
-    },
-    "auditoryneuroscience.com": {
-        "scan_time": 1606680588.342377,
-        "ipv4_addresses": [
-            "144.214.26.111"
-        ],
-        "rdns_names": [
-            "twinkle.bms.cityu.edu.hk"
+        "scan_time": 1606784548.127497,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
+    "auditoryneuroscience.com": {
+        "scan_time": 1606784551.607281,
+        "tls_versions": []
+    },
     "asee.org": {
-        "scan_time": 1606680589.557079,
-        "ipv4_addresses": [
-            "216.185.13.131"
-        ],
-        "rdns_names": [
-            "216-185-13-131.i95.net"
+        "scan_time": 1606784581.634746,
+        "tls_versions": [
+            "TLSv1.0",
+            "TLSv1.1",
+            "TLSv1.2"
         ]
     },
     "gradeinflation.com": {
-        "scan_time": 1606680590.459866,
-        "ipv4_addresses": [
-            "66.70.176.24"
-        ],
-        "rdns_names": [
-            "ahs4.r4l.com"
+        "scan_time": 1606784585.73488,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "spacejam.com": {
-        "scan_time": 1606680591.416847,
-        "ipv4_addresses": [
-            "99.83.180.228",
-            "75.2.104.223"
-        ],
-        "rdns_names": [
-            "a259cf76d74e1f65f.awsglobalaccelerator.com",
-            "a259cf76d74e1f65f.awsglobalaccelerator.com"
-        ]
+        "scan_time": 1606784589.49617,
+        "tls_versions": []
     },
     "pmichaud.com": {
-        "scan_time": 1606680592.6057,
-        "ipv4_addresses": [
-            "23.254.203.248"
-        ],
-        "rdns_names": [
-            "hwsrv-233708.hostwindsdns.com"
+        "scan_time": 1606784619.523668,
+        "tls_versions": [
+            "TLSv1.2",
+            "TLSv1.3"
         ]
     },
     "kli.org": {
-        "scan_time": 1606680593.592154,
-        "ipv4_addresses": [
-            "208.97.188.67"
-        ],
-        "rdns_names": [
-            "ps506619.dreamhostps.com"
+        "scan_time": 1606784625.704687,
+        "tls_versions": [
+            "TLSv1.2"
         ]
     }
 }

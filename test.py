@@ -1,12 +1,36 @@
-import json
+# import json
 import time
 import sys
 import subprocess
 # import requests
-import http
+# import http
 
 # import scan
 # print(str(time.time()))
+result = ""
+try:
+    result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "facebook.com:443"],
+                                      timeout=2).decode("utf-8")
+except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+    # result = str(e)
+    # print("e:", e)
+    # print(e.output)
+    result = str(e.output)
+
+print(type(result))
+
+if "New, TLSv1.3," in result:
+    print("it worked tls1_3 in use")
+else:
+    print("Tls v1.3 not in use")
+
+
+
+# print(result)
+# if "returned non-zero exit status 1" in result:
+#     print("it worked")
+# else:
+#     print("it didnt work")
 
 ## rdns_names done
 # face_book_ip4s = ["157.240.18.35", "157.240.2.35", "69.171.250.35", "31.13.67.35", "157.240.195.35", "157.240.1.35"]
