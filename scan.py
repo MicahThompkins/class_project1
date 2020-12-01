@@ -325,8 +325,6 @@ class ScanClass:
                 for tls in tls_vers:
                     result = self.tls_nmap_helper(result, return_arr, tls)
 
-            # TODO implement tls1_3
-
             tls3 = self.tls_1_3_helper(url)
             if tls3:
                 return_arr.append("TLSv1.3")
@@ -402,14 +400,72 @@ class ScanClass:
 
             return []
 
-
     def rtt_range(self, url):
-        # TODO check outputs
-        return "test rtt"
+        ranges = []
+        min_max_tuple = []
+        ip4_addys = self.scan_output_dictonary["ipv4_addresses"]
+        # print(ip4_addys[0])
+        for addy in ip4_addys:
+            ip_string = "time echo -e '\x1dclose\x0d' | telnet " + str(addy) + " 443"
+
+            count = 0
+            return_none = False
+            while True:
+                try:
+                    result = subprocess.check_output(["sh", "-c", ip_string],
+                                                     timeout=timeout_num, stderr=subprocess.STDOUT).decode("utf-8")
+                    break
+                except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
+                    print("e:", e)
+                    if count > 1:
+                        # This particular IP address's rtt won't be in the domain's rtt_range.
+                        print("failed thrice rtt_range, ipv4 address: ", addy)
+                        return_none = True
+                        break
+                    else:
+                        count += 1
+            if return_none:
+                continue
+
+            result_arr = result.split("real\t")
+            del result_arr[0]
+            num_arr = result_arr[0].split("s")
+            num_time = num_arr[0].split("m")
+            rtt = int((int(num_time[0]) * 60 * 1000) + (float(num_time[1]) * 1000))
+            ranges.append(rtt)
+
+        if len(ranges) == 0:
+            return [-1, -1]
+        min_max_tuple = [min(ranges), max(ranges)]
+        return min_max_tuple
 
     def geo_locations(self, url):
-        # TODO check outputs
-        return "test geo"
+        ip4_addys = self.scan_output_dictonary["ipv4_addresses"]
+        locations = []
+
+        reader = maxminddb.open_database('GeoLite2-City.mmdb')
+        for addy in ip4_addys:
+            loc_data = reader.get(addy)
+            location = ""
+            location_keys = loc_data.keys()
+
+            if 'city' in location_keys:
+                location += loc_data['city']['names']['en'] + ", "
+            if 'subdivisions' in location_keys:
+                location += loc_data['subdivisions'][0]['names']['en'] + ", "
+            if 'country' in location_keys:
+                location += loc_data['country']['names']['en']
+            if location == "":
+                if 'continent' in location_keys:
+                    location = loc_data['continent']['names']['en']
+            # print(location)
+            locations.append(location)
+
+        reader.close()
+        locations = list(dict.fromkeys(locations))
+
+        return locations
+
 
 
 s = ScanClass(input_file, output_file)
