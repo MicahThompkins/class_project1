@@ -1,6 +1,6 @@
 {
     "youtube.com": {
-        "scan_time": 1606784425.695443,
+        "scan_time": 1606791785.3971689,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -9,27 +9,22 @@
         ]
     },
     "en.wikipedia.org": {
-        "scan_time": 1606784429.650101,
+        "scan_time": 1606791789.519682,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "twitter.com": {
-        "scan_time": 1606784433.727903,
+        "scan_time": 1606791793.811168,
         "tls_versions": []
     },
     "facebook.com": {
-        "scan_time": 1606784463.755004,
-        "tls_versions": [
-            "TLSv1.0",
-            "TLSv1.1",
-            "TLSv1.2",
-            "TLSv1.3"
-        ]
+        "scan_time": 1606791823.84397,
+        "tls_versions": []
     },
     "amazon.com": {
-        "scan_time": 1606784468.309529,
+        "scan_time": 1606791824.388723,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -37,7 +32,7 @@
         ]
     },
     "yelp.com": {
-        "scan_time": 1606784471.247575,
+        "scan_time": 1606791827.423646,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -46,7 +41,7 @@
         ]
     },
     "reddit.com": {
-        "scan_time": 1606784475.158345,
+        "scan_time": 1606791831.604506,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -54,7 +49,7 @@
         ]
     },
     "imdb.com": {
-        "scan_time": 1606784477.4389381,
+        "scan_time": 1606791833.791135,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -62,14 +57,14 @@
         ]
     },
     "fandom.com": {
-        "scan_time": 1606784480.36153,
+        "scan_time": 1606791836.875062,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "pinterest.com": {
-        "scan_time": 1606784483.559131,
+        "scan_time": 1606791840.243815,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -77,14 +72,14 @@
         ]
     },
     "tripadvisor.com": {
-        "scan_time": 1606784485.5561862,
+        "scan_time": 1606791842.377942,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "instagram.com": {
-        "scan_time": 1606784500.4011068,
+        "scan_time": 1606791857.1888168,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -93,14 +88,14 @@
         ]
     },
     "walmart.com": {
-        "scan_time": 1606784508.401574,
+        "scan_time": 1606791865.294646,
         "tls_versions": [
             "TLSv1.1",
             "TLSv1.2"
         ]
     },
     "northwestern.edu": {
-        "scan_time": 1606784512.334123,
+        "scan_time": 1606791872.1563299,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -108,7 +103,7 @@
         ]
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1606784517.515986,
+        "scan_time": 1606791878.854762,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -116,7 +111,7 @@
         ]
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1606784520.9299579,
+        "scan_time": 1606791882.282615,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -124,20 +119,20 @@
         ]
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1606784526.169325,
+        "scan_time": 1606791885.202892,
         "tls_versions": [
             "TLSv1.2"
         ]
     },
     "uchicago.edu": {
-        "scan_time": 1606784529.216547,
+        "scan_time": 1606791888.22127,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "illinois.edu": {
-        "scan_time": 1606784535.107071,
+        "scan_time": 1606791893.9464629,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -145,7 +140,7 @@
         ]
     },
     "stevetarzia.com": {
-        "scan_time": 1606784539.1898398,
+        "scan_time": 1606791899.021199,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -153,7 +148,7 @@
         ]
     },
     "clocktab.com": {
-        "scan_time": 1606784548.127497,
+        "scan_time": 1606791908.70914,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -162,11 +157,11 @@
         ]
     },
     "auditoryneuroscience.com": {
-        "scan_time": 1606784551.607281,
+        "scan_time": 1606791912.290783,
         "tls_versions": []
     },
     "asee.org": {
-        "scan_time": 1606784581.634746,
+        "scan_time": 1606791942.319489,
         "tls_versions": [
             "TLSv1.0",
             "TLSv1.1",
@@ -174,25 +169,28 @@
         ]
     },
     "gradeinflation.com": {
-        "scan_time": 1606784585.73488,
+        "scan_time": 1606791947.791588,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "spacejam.com": {
-        "scan_time": 1606784589.49617,
-        "tls_versions": []
+        "scan_time": 1606791951.645922,
+        "tls_versions": [
+            "TLSv1.1",
+            "TLSv1.2"
+        ]
     },
     "pmichaud.com": {
-        "scan_time": 1606784619.523668,
+        "scan_time": 1606791955.202678,
         "tls_versions": [
             "TLSv1.2",
             "TLSv1.3"
         ]
     },
     "kli.org": {
-        "scan_time": 1606784625.704687,
+        "scan_time": 1606791961.660073,
         "tls_versions": [
             "TLSv1.2"
         ]
