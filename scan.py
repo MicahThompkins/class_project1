@@ -60,7 +60,7 @@ class ScanClass:
         #     print("it worked")
         while True:
             try:
-                result = subprocess.check_output(args, timeout=timeout_input).decode("utf-8")
+                result = subprocess.check_output(args, stderr=subprocess.DEVNULL, timeout=timeout_input).decode("utf-8")
             except subprocess.TimeoutExpired as e:
                 # print("timing out for command: ", args[0], " at site: ", args[-1])
                 # print(e)
@@ -279,7 +279,7 @@ class ScanClass:
         while True:
             try:
                 result = subprocess.check_output(args,
-                                                 timeout=2).decode("utf-8")
+                                                 stderr=subprocess.DEVNULL,timeout=2).decode("utf-8")
                 break
             except subprocess.TimeoutExpired as e:
                 # result = str(e)
@@ -349,9 +349,9 @@ class ScanClass:
                                                  timeout=timeout_num).decode("utf-8")
             except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
                 # result = str(e)
-                print("e:", e)
+                # print("e:", e)
                 if count > 1:
-                    print("failed thrice root_Ca, url: ", url)
+                    # print("failed thrice root_Ca, url: ", url)
                 # print(e.output)
                     return_none = True
                     break
@@ -405,25 +405,27 @@ class ScanClass:
         ranges = []
         min_max_tuple = []
         ip4_addys = self.scan_output_dictonary["ipv4_addresses"]
+        ports = ["80", "443", "22"]
         # print(ip4_addys[0])
         for addy in ip4_addys:
-            ip_string = "time echo -e '\x1dclose\x0d' | telnet " + str(addy) + " 443"
-
             count = 0
             return_none = False
+
             while True:
                 try:
-                    result = subprocess.check_output(["sh", "-c", ip_string],
-                                                     timeout=timeout_num, stderr=subprocess.STDOUT).decode("utf-8")
+                    result = subprocess.check_output(
+                        ["sh", "-c", "time echo -e '\x1dclose\x0d' | telnet " + str(addy) + " " + ports[(count % 3)]],
+                        timeout=timeout_num, stderr=subprocess.STDOUT).decode("utf-8")
                     break
                 except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-                    print("e:", e)
-                    if count > 1:
+                    # print("e:", e)
+                    if count > 6:
                         # This particular IP address's rtt won't be in the domain's rtt_range.
-                        print("failed thrice rtt_range, ipv4 address: ", addy)
+                        # print("failed all common ports twice, ipv4 address: ", addy)
                         return_none = True
                         break
                     else:
+                        # print("checking on different port")
                         count += 1
             if return_none:
                 continue
@@ -436,7 +438,7 @@ class ScanClass:
             ranges.append(rtt)
 
         if len(ranges) == 0:
-            return [-1, -1]
+            return None
         min_max_tuple = [min(ranges), max(ranges)]
         return min_max_tuple
 

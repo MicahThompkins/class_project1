@@ -10,7 +10,7 @@ import subprocess
 result = ""
 try:
     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "facebook.com:443"],
-                                      timeout=2).decode("utf-8")
+                                      stderr=subprocess.DEVNULL, timeout=2).decode("utf-8")
 except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
     # result = str(e)
     # print("e:", e)

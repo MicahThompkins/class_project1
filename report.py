@@ -12,42 +12,49 @@ output_file = str(command_input[2])
 with open(input_file) as f:
     data = json.loads(f.read())
 
-tab1 = texttable.Texttable()
 tab2 = texttable.Texttable()
 tab3 = texttable.Texttable()
 tab4 = texttable.Texttable()
 tab5 = texttable.Texttable()
 
+categories = ["Domain", "Server Name", "Root Certificate Authority", "TLS Versions", "Locations", "Scan Time", "RTT Range", "Listens for Unencrypted HTTP",
+                   "Redirects to HTTPS", "HSTS Enabled", "IPv4 Addresses", "IPv6 Addresses", "Reverse DNS Names"]
+names = ["Domain", "http_server", "root_ca", "tls_versions", "geo_locations", "scan_time", "rtt_range", "insecure_http",
+                   "redirect_to_https", "hsts", "ipv4_addresses", "ipv6_addresses", "rdns_names"]
+
 # Part 3.1
 # Create Table of values from part 2
-def one():
-    tab1.add_rows([["URL", "scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http",
-                   "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]],
-                 header=True)
-    width = [20] * 13
-    width[3] = 40
-    width[12] = 40
-    alignment = ['c'] * 13
+def one(url):
+    tab1 = texttable.Texttable()
+    width = [20, 30]
+    alignment = ['c', 'c']
     tab1.set_cols_width(width)
     tab1.set_cols_align(alignment)
-    tab1.set_cols_dtype(["t", "t", "a", "a", "t", "t", "t", "t", "a", "t", "a", "a", "a"])
+    tab1.set_cols_dtype(["t", "t"])
 
-    for key in data:
-        row = [key]
-        vals_dict = data[key]
-        for vals in vals_dict:
-            row.append(vals_dict[vals])
-        tab1.add_row(row)
+    pointer = 0
+    tab1.add_rows([[categories[pointer], url]], header=True)
+    pointer += 1
+    while pointer < 13:
+        tab1.add_row([categories[pointer], data[url][names[pointer]]])
+        pointer += 1
+
+    return tab1
 
 # Part 3.2
 def two():
-    tab2.add_rows([["URL", "Minimum RTT"]], header= True)
-    tab2.set_cols_width([20, 20])
+    tab2.add_rows([["Domain", "Minimum RTT"]], header= True)
+    tab2.set_cols_width([27, 13])
     tab2.set_cols_align(['c', 'c'])
+
 
     rows = []
     for key in data:
-        tuple = [key, data[key]["rtt_range"][0]]
+        # RTT RANGE FIX
+        if data[key]["rtt_range"] is None:
+            tuple = [key, None]
+        else:
+            tuple = [key, data[key]["rtt_range"][0]]
         rows.append(tuple)
     rows = sorted(rows, key=itemgetter(1))
 
@@ -56,8 +63,8 @@ def two():
 
 # Part 3.3
 def three():
-    tab3.add_rows([["root_ca", "Number of Occurences"]], header=True)
-    tab3.set_cols_width([20, 20])
+    tab3.add_rows([["Root Certificate Authority", "Number of Occurrences"]], header=True)
+    tab3.set_cols_width([20, 15])
     tab3.set_cols_align(['c', 'c'])
 
     rows_dict = {}
@@ -76,8 +83,8 @@ def three():
 
 # Part 3.4
 def four():
-    tab4.add_rows([["http_server", "Number of Occurences"]], header=True)
-    tab4.set_cols_width([20, 20])
+    tab4.add_rows([["Server Name", "Number of Occurrences"]], header=True)
+    tab4.set_cols_width([25, 15])
     tab4.set_cols_align(['c', 'c'])
 
     rows_dict = {}
@@ -98,7 +105,7 @@ def four():
 # Part 3.5
 def five():
     tab5.add_rows([["Supported", "Percentage"]], header=True)
-    tab5.set_cols_width([20, 20])
+    tab5.set_cols_width([15, 15])
     tab5.set_cols_align(['c', 'c'])
 
     total_num_domains = len(data.keys())
@@ -141,30 +148,37 @@ def five():
 
 
 # when finished
-one()
 two()
 three()
 four()
 five()
+horizontal_line = "--------------------------------------------------------------------"
 
 with open(output_file, 'w') as f:
-    f.write("Table 3.1: \n")
-    f.write(tab1.draw())
-    f.write("\n\n\n")
+    f.write("Tables 3.1: \n")
 
-    f.write("Table 3.2: \n")
+    for key in data:
+        tab = one(key)
+        f.write(tab.draw())
+        f.write("\n\n\n")
+
+    f.write(horizontal_line)
+    f.write("\nTable 3.2: \n")
     f.write(tab2.draw())
     f.write("\n\n\n")
 
-    f.write("Table 3.3: \n")
+    f.write(horizontal_line)
+    f.write("\nTable 3.3: \n")
     f.write(tab3.draw())
     f.write("\n\n\n")
 
-    f.write("Table 3.4: \n")
+    f.write(horizontal_line)
+    f.write("\nTable 3.4: \n")
     f.write(tab4.draw())
     f.write("\n\n\n")
 
-    f.write("Table 3.5: \n")
+    f.write(horizontal_line)
+    f.write("\nTable 3.5: \n")
     f.write(tab5.draw())
     f.write("\n\n\n")
 
