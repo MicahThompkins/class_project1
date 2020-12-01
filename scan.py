@@ -4,7 +4,7 @@ import time
 import subprocess
 import maxminddb
 
-print("hello world")
+# print("hello world")
 command_input = sys.argv
 timeout_num = 2
 input_file = str(command_input[1])
@@ -14,11 +14,11 @@ output_file = str(command_input[2])
 
 class ScanClass:
 
-    print("after inout")
+    # print("after inout")
     # output_dictonary = {}
     # results_to_pass = ""
     def __init__(self, input_file, output_file):
-        print("in main")
+        # print("in main")
         file = open(input_file, 'r')
         file_lines = file.readlines()
         self.output_dictonary = {}
@@ -37,16 +37,16 @@ class ScanClass:
 
     def scan(self, url):
         func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
-        func_names = ["scan_time", "tls_versions"]  # , "rdns_names"]
+        # func_names = ["scan_time", "tls_versions"]  # , "rdns_names"]
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
         # output_dictonary = {}
         self.scan_output_dictonary = {}
         for func in func_names:
-            print(url, func)
+            # print(url, func)
             try:
                 self.scan_output_dictonary[func] = eval('self.' + func + "('" + url + "')")
             except (FileNotFoundError, OSError) as e:
-                print("exception caught: ", e)
+                # print("exception caught: ", e)
                 error_out = func + " is not able to run due to missing command line tool"
                 # print(error_out, file=sys.stderr)
                 sys.stderr.write(error_out)
@@ -374,7 +374,7 @@ class ScanClass:
             index_of_last_comma = root_ca_first.rfind(",")
             root_ca = root_ca_first[:index_of_last_comma]
             # print("Root CA: ", root_ca)
-        print("root_ca: ", root_ca)
+        # print("root_ca: ", root_ca)
         if root_ca:
             return root_ca
         else:
