@@ -10,6 +10,7 @@ input_file = str(command_input[1])
 output_file = str(command_input[2])
 
 
+
 class ScanClass:
 
     print("after inout")
@@ -35,10 +36,9 @@ class ScanClass:
 
     def scan(self, url):
         func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "insecure_http", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
-        # func_names = ["scan_time", "ipv4_addresses", "rdns_names"]  # , "rdns_names"]
+        func_names = ["scan_time", "tls_versions"]  # , "rdns_names"]
         # func_names = ["scan_time", "ipv4_addresses", "ipv6_addresses", "http_server", "redirect_to_https", "hsts", "tls_versions", "root_ca", "rdns_names", "rtt_range", "geo_locations"]
         # output_dictonary = {}
-        # TODO make sure this output dictonary logic flows
         self.scan_output_dictonary = {}
         for func in func_names:
             print(url, func)
@@ -137,7 +137,6 @@ class ScanClass:
         return ip_addys
 
     def http_server(self, url):
-        # TODO https://campuswire.com/c/G1B33C150/feed/516
         url = "http://"  + url
         # try:
         #     result = subprocess.check_output(["curl", "-I", "--http2", url],
@@ -179,15 +178,18 @@ class ScanClass:
             return False
 
     def redirect_helper(self, location):
-        # TODO change to subprocess caller
         count = 1
         while count < 10:
-            try:
-                result = subprocess.check_output(["curl", "-I", "--http2", location],
-                                                 timeout=timeout_num).decode("utf-8")
-            except subprocess.TimeoutExpired:
-                return False
-            except subprocess.CalledProcessError:
+            args = ["curl", "-I", "--http2", location]
+            result = self.subprocess_caller(args, timeout_num)
+            # try:
+            #     result = subprocess.check_output(["curl", "-I", "--http2", location],
+            #                                      timeout=timeout_num).decode("utf-8")
+            # except subprocess.TimeoutExpired:
+            #     return False
+            # except subprocess.CalledProcessError:
+            #     return False
+            if result == "":
                 return False
             location_split = result.split("Location: ")
             if len(location_split) > 1:
@@ -206,14 +208,18 @@ class ScanClass:
                 return False
 
     def redirect_hsts_helper(self, url):
-        # TODO change to subprocess caller
-        try:
-            result = subprocess.check_output(["curl", "-I", "--http2", url],
-                                             timeout=timeout_num).decode("utf-8")
-        except subprocess.TimeoutExpired:
-            self.hsts_bool = False
-            return False
-        except subprocess.CalledProcessError:
+        args = ["curl", "-I", "--http2", url]
+        result = self.subprocess_caller(args, timeout_num)
+        # try:
+        #     result = subprocess.check_output(["curl", "-I", "--http2", url],
+        #                                      timeout=timeout_num).decode("utf-8")
+        # except subprocess.TimeoutExpired:
+        #     self.hsts_bool = False
+        #     return False
+        # except subprocess.CalledProcessError:
+        #     self.hsts_bool = False
+        #     return False
+        if result == "":
             self.hsts_bool = False
             return False
         #TODO add server header check and change
@@ -222,9 +228,7 @@ class ScanClass:
             return True
 
     def redirect_to_https(self, url):
-        # TODO change to subprocess caller
         if self.result_to_pass != "":
-            # TODO if 200 OK shows up elsewhere could find index of http and index of 200 ok and check to make sure distance is small
             if "200 OK" in self.result_to_pass:
                 self.result_to_pass = ""
                 return False
@@ -265,6 +269,44 @@ class ScanClass:
         else:
             return result
 
+    def tls_1_3_helper(self, url):
+        url_string = url + ":443"
+        args = ["openssl", "s_client", "-tls1_3", "-connect", url_string]
+        count = 0
+        tls_3_in = False
+        result = ""
+        while True:
+            try:
+                result = subprocess.check_output(args,
+                                                 timeout=2).decode("utf-8")
+                break
+            except subprocess.TimeoutExpired as e:
+                # result = str(e)
+                # print("e:", e)
+                # print(e.output)
+                result = str(e.output)
+                if "New, TLSv1.3," in result:
+                    tls_3_in = True
+                    break
+                if count > 1:
+                    break
+                else:
+                    count += 1
+            except subprocess.CalledProcessError:
+                if count > 1:
+                    break
+                else:
+                    count += 1
+        if tls_3_in:
+            return True
+        else:
+            if result != "":
+                if "New, TLSv1.3," in result:
+                    return True
+                else: return False
+            else:
+                return False
+
     def tls_versions(self, url):
         # TODO for spacejam, auditoryneuroscience.com figure out timeout issue, 16 seconds not enough, either false
         # TODO or use openssl on all 4
@@ -284,26 +326,17 @@ class ScanClass:
                     result = self.tls_nmap_helper(result, return_arr, tls)
 
             # TODO implement tls1_3
-            # result = ""
-            # try:
-            #     result = subprocess.check_output(["openssl", "s_client", "-tls1_3", "-connect", "tls131.cloudfare.com:443"],
-            #                                      timeout=2).decode("utf-8")
-            # except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-            #     result = str(e)
-            #     print("e:", e)
-            #
-            # print(result)
-            # if "returned non-zero exit status 1" in result:
-            #     print("it worked")
-            # else:
-            #     print("it didnt work")
+
+            tls3 = self.tls_1_3_helper(url)
+            if tls3:
+                return_arr.append("TLSv1.3")
 
             if return_arr:
                 return return_arr
             else:
-                return None
+                return []
         else:
-            return None
+            return []
 
     def root_ca(self, url):
         input_url = url + ":443"
@@ -366,14 +399,16 @@ class ScanClass:
         if rdns_names_arr:
             return rdns_names_arr
         else:
-            #TODO check answer to my question on campuswire
-            return None
+
+            return []
 
 
     def rtt_range(self, url):
+        # TODO check outputs
         return "test rtt"
 
     def geo_locations(self, url):
+        # TODO check outputs
         return "test geo"
 
 
