@@ -1,42 +1,39 @@
 {
     "youtube.com": {
-        "scan_time": 1606793378.473956,
+        "scan_time": 1606861667.929696,
         "ipv4_addresses": [
-            "172.217.4.206",
-            "172.217.9.78",
             "216.58.192.142",
-            "172.217.12.78",
-            "172.217.6.14",
-            "172.217.3.110",
-            "216.58.214.238",
+            "172.217.8.174",
             "172.217.5.14",
-            "64.233.162.91",
+            "172.217.12.78",
+            "172.217.0.14",
+            "216.58.214.238",
             "64.233.162.136",
-            "64.233.162.190",
             "64.233.162.93",
-            "172.217.10.110",
+            "64.233.162.91",
+            "64.233.162.190",
+            "142.250.64.78",
             "172.217.12.142",
-            "172.217.17.142"
+            "216.58.208.110"
         ],
         "ipv6_addresses": [
             "2607:f8b0:4009:80c::200e",
             "2607:f8b0:4009:816::200e",
-            "2607:f8b0:4009:800::200e",
             "2607:f8b0:4000:815::200e",
-            "2607:f8b0:4009:803::200e",
             "2607:f8b0:4006:818::200e",
             "2a00:1450:400d:803::200e",
             "2001:4860:4802:32::a",
             "2001:4860:4802:34::a",
             "2001:4860:4802:36::a",
             "2001:4860:4802:38::a",
-            "2a00:1450:4010:c05::5d",
-            "2a00:1450:4010:c05::5b",
+            "2607:f8b0:4009:807::200e",
             "2a00:1450:4010:c05::88",
             "2a00:1450:4010:c05::be",
-            "2607:f8b0:4004:80a::200e",
+            "2a00:1450:4010:c05::5d",
+            "2a00:1450:4010:c05::5b",
+            "2607:f8b0:4006:811::200e",
             "2607:f8b0:4006:819::200e",
-            "2a00:1450:400e:809::200e"
+            "2607:f8b0:4006:812::200e"
         ],
         "http_server": "YouTube Frontend Proxy",
         "insecure_http": true,
@@ -50,30 +47,30 @@
         ],
         "root_ca": "Google Trust Services",
         "rdns_names": [
-            "ord38s09-in-f14.1e100.net",
+            "ord37s08-in-f14.1e100.net",
             "dfw28s05-in-f14.1e100.net",
-            "lga34s18-in-f14.1e100.net",
-            "li-in-f91.1e100.net",
             "li-in-f136.1e100.net",
-            "li-in-f190.1e100.net",
             "li-in-f93.1e100.net",
-            "lga34s15-in-f14.1e100.net",
+            "li-in-f91.1e100.net",
+            "li-in-f190.1e100.net",
+            "lga34s30-in-f14.1e100.net",
             "lga34s19-in-f14.1e100.net"
         ],
         "rtt_range": [
-            29,
-            153
+            37,
+            192
         ],
         "geo_locations": [
-            "United States",
             "Draper, Utah, United States",
+            "United States",
             "Mountain View, California, United States"
         ]
     },
     "en.wikipedia.org": {
-        "scan_time": 1606793386.381621,
+        "scan_time": 1606861677.1886249,
         "ipv4_addresses": [
             "208.80.154.224",
+            "208.80.153.224",
             "91.198.174.192"
         ],
         "ipv6_addresses": [
@@ -91,11 +88,12 @@
         "root_ca": "Let's Encrypt",
         "rdns_names": [
             "text-lb.eqiad.wikimedia.org",
+            "text-lb.codfw.wikimedia.org",
             "text-lb.esams.wikimedia.org"
         ],
         "rtt_range": [
-            95,
-            189
+            85,
+            163
         ],
         "geo_locations": [
             "United States",
@@ -103,12 +101,12 @@
         ]
     },
     "twitter.com": {
-        "scan_time": 1606793393.4633238,
+        "scan_time": 1606861685.6651351,
         "ipv4_addresses": [
-            "104.244.42.1",
-            "104.244.42.65",
             "104.244.42.193",
-            "104.244.42.129"
+            "104.244.42.1",
+            "104.244.42.129",
+            "104.244.42.65"
         ],
         "ipv6_addresses": [],
         "http_server": "tsa_b",
@@ -119,30 +117,31 @@
         "root_ca": "DigiCert Inc",
         "rdns_names": [],
         "rtt_range": [
-            62,
-            68
+            53,
+            71
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "facebook.com": {
-        "scan_time": 1606793446.2702122,
+        "scan_time": 1606861740.402336,
         "ipv4_addresses": [
             "157.240.18.35",
             "157.240.2.35",
             "157.240.19.35",
-            "69.171.250.35",
+            "157.240.14.35",
             "31.13.67.35",
+            "69.171.250.35",
             "157.240.196.35",
-            "31.13.66.35",
-            "157.240.221.35"
+            "157.240.221.35",
+            "185.60.216.35"
         ],
         "ipv6_addresses": [
             "2a03:2880:f127:283:face:b00c:0:25de",
             "2a03:2880:f127:83:face:b00c:0:25de",
             "2a03:2880:f134:83:face:b00c:0:25de",
-            "2a03:2880:f103:83:face:b00c:0:25de",
+            "2a03:2880:f12c:183:face:b00c:0:25de",
             "2a03:2880:f12c:83:face:b00c:0:25de",
             "2a03:2880:f0fc:c:face:b00c:0:35",
             "2a03:2880:f0fd:c:face:b00c:0:35",
@@ -167,15 +166,16 @@
             "edge-star-mini-shv-02-ort2.facebook.com",
             "edge-star-mini-shv-01-ort2.facebook.com",
             "edge-star-mini-shv-01-dfw5.facebook.com",
-            "edge-star-mini-shv-01-any2.facebook.com",
+            "edge-star-mini-shv-02-mia3.facebook.com",
             "edge-star-mini-shv-01-mia3.facebook.com",
+            "edge-star-mini-shv-01-any2.facebook.com",
             "edge-star-mini-shv-02-mrs2.facebook.com",
-            "edge-star-mini-shv-01-iad3.facebook.com",
-            "edge-star-mini-shv-01-lhr8.facebook.com"
+            "edge-star-mini-shv-01-lhr8.facebook.com",
+            "edge-star-mini-shv-01-frx5.facebook.com"
         ],
         "rtt_range": [
-            30,
-            137
+            40,
+            172
         ],
         "geo_locations": [
             "United States",
@@ -183,11 +183,11 @@
         ]
     },
     "amazon.com": {
-        "scan_time": 1606793453.947763,
+        "scan_time": 1606861752.9658399,
         "ipv4_addresses": [
-            "176.32.103.205",
             "205.251.242.103",
-            "176.32.98.166"
+            "176.32.98.166",
+            "176.32.103.205"
         ],
         "ipv6_addresses": [],
         "http_server": "Server",
@@ -204,23 +204,22 @@
             "s3-console-us-standard.console.aws.amazon.com"
         ],
         "rtt_range": [
-            46,
-            55
+            64,
+            81
         ],
         "geo_locations": [
             "Ashburn, Virginia, United States"
         ]
     },
     "yelp.com": {
-        "scan_time": 1606793459.672427,
+        "scan_time": 1606861769.197813,
         "ipv4_addresses": [
             "199.232.76.116",
-            "199.232.8.116",
-            "151.101.76.116",
+            "151.101.68.116",
             "199.232.64.116",
             "151.101.244.116",
             "151.101.36.116",
-            "151.101.248.116",
+            "199.232.8.116",
             "199.232.36.116"
         ],
         "ipv6_addresses": [],
@@ -237,26 +236,26 @@
         "root_ca": "DigiCert Inc",
         "rdns_names": [],
         "rtt_range": [
-            35,
-            245
+            56,
+            165
         ],
         "geo_locations": [
             "Chicago, Illinois, United States",
-            "Dallas, Texas, United States",
-            "Central, Central and Western District, Hong Kong",
+            "Denver, Colorado, United States",
             "Ashburn, Virginia, United States",
             "Helsinki, Uusimaa, Finland",
             "Amsterdam, North Holland, Netherlands",
+            "Dallas, Texas, United States",
             "New York, New York, United States"
         ]
     },
     "reddit.com": {
-        "scan_time": 1606793467.6591911,
+        "scan_time": 1606861779.981374,
         "ipv4_addresses": [
-            "151.101.193.140",
-            "151.101.1.140",
             "151.101.65.140",
-            "151.101.129.140"
+            "151.101.129.140",
+            "151.101.193.140",
+            "151.101.1.140"
         ],
         "ipv6_addresses": [],
         "http_server": "snooserv",
@@ -271,19 +270,19 @@
         "root_ca": "DigiCert Inc",
         "rdns_names": [],
         "rtt_range": [
-            21,
-            25
+            36,
+            63
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "imdb.com": {
-        "scan_time": 1606793475.492309,
+        "scan_time": 1606861791.0836852,
         "ipv4_addresses": [
+            "52.94.237.74",
             "52.94.225.248",
-            "52.94.228.167",
-            "52.94.237.74"
+            "52.94.228.167"
         ],
         "ipv6_addresses": [],
         "http_server": "Server",
@@ -298,20 +297,20 @@
         "root_ca": "Amazon",
         "rdns_names": [],
         "rtt_range": [
-            54,
-            56
+            53,
+            78
         ],
         "geo_locations": [
             "Ashburn, Virginia, United States"
         ]
     },
     "fandom.com": {
-        "scan_time": 1606793481.5688279,
+        "scan_time": 1606861804.008363,
         "ipv4_addresses": [
-            "151.101.128.194",
             "151.101.192.194",
             "151.101.0.194",
-            "151.101.64.194"
+            "151.101.64.194",
+            "151.101.128.194"
         ],
         "ipv6_addresses": [],
         "http_server": "Varnish",
@@ -325,20 +324,20 @@
         "root_ca": "GlobalSign nv-sa",
         "rdns_names": [],
         "rtt_range": [
-            27,
-            69
+            34,
+            62
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "pinterest.com": {
-        "scan_time": 1606793487.5979662,
+        "scan_time": 1606861814.2309818,
         "ipv4_addresses": [
+            "151.101.192.84",
             "151.101.0.84",
             "151.101.64.84",
-            "151.101.128.84",
-            "151.101.192.84"
+            "151.101.128.84"
         ],
         "ipv6_addresses": [],
         "http_server": null,
@@ -353,19 +352,19 @@
         "root_ca": "DigiCert Inc",
         "rdns_names": [],
         "rtt_range": [
-            30,
-            33
+            35,
+            55
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "tripadvisor.com": {
-        "scan_time": 1606793492.168402,
+        "scan_time": 1606861826.965308,
         "ipv4_addresses": [
-            "192.229.189.15",
             "192.229.162.112",
-            "192.229.182.112"
+            "192.229.182.112",
+            "192.229.189.15"
         ],
         "ipv6_addresses": [],
         "http_server": "Apache",
@@ -379,173 +378,175 @@
         "root_ca": "GlobalSign nv-sa",
         "rdns_names": [],
         "rtt_range": [
-            48,
-            275
+            183,
+            325
         ],
         "geo_locations": [
-            "United States",
             "Texas, United States",
-            "London, England, United Kingdom"
+            "London, England, United Kingdom",
+            "United States"
         ]
     },
     "instagram.com": {
-        "scan_time": 1606793500.818656,
+        "scan_time": 1606861857.874065,
         "ipv4_addresses": [
-            "52.3.71.143",
-            "52.5.39.111",
-            "52.5.199.160",
-            "52.71.109.30",
-            "3.208.195.159",
-            "18.235.93.155",
-            "34.230.186.253",
-            "35.173.166.200",
-            "34.203.7.201",
-            "52.2.150.28",
-            "52.71.223.34",
-            "34.239.39.134",
-            "35.170.160.105",
-            "52.0.178.195",
-            "52.0.37.128",
-            "52.73.249.1",
-            "52.87.133.20",
-            "52.54.142.16",
-            "3.223.93.237",
-            "54.156.178.64",
-            "34.195.3.186",
-            "3.211.190.38",
-            "3.228.78.219",
-            "34.239.18.154",
-            "107.23.24.80",
-            "3.210.57.193",
-            "3.214.207.247",
-            "52.54.232.92",
-            "52.7.184.177",
-            "34.227.187.18",
-            "34.206.33.202",
-            "35.173.167.253",
-            "52.1.109.248",
-            "52.1.238.189",
-            "34.197.66.165",
-            "54.82.164.248",
-            "34.232.174.143",
-            "3.219.90.152",
-            "52.23.131.79",
-            "34.231.40.113",
-            "3.94.220.22",
-            "3.224.37.102",
-            "3.223.111.137",
-            "34.195.173.122",
-            "3.209.65.38",
-            "34.238.65.211",
-            "52.204.190.157",
-            "52.5.183.1",
-            "52.6.191.0",
-            "34.228.93.200",
-            "52.200.201.185",
-            "18.214.150.8",
-            "34.196.209.8",
-            "54.204.115.52",
-            "52.73.165.14",
-            "3.220.76.115",
-            "52.71.167.163",
-            "3.212.211.9",
-            "3.211.195.191",
-            "3.224.36.18",
-            "52.4.134.145",
-            "34.206.62.254",
-            "35.153.214.22",
-            "34.239.89.209",
-            "3.210.81.177",
-            "3.225.109.3",
-            "54.82.122.213",
-            "3.214.209.46",
-            "3.224.3.80",
-            "54.172.200.155",
-            "54.145.10.249",
-            "3.218.162.209",
             "34.224.11.145",
+            "52.1.230.205",
+            "52.45.116.207",
+            "52.200.54.57",
+            "54.145.10.249",
+            "3.208.218.29",
+            "3.217.178.33",
             "34.192.66.106",
+            "18.235.93.155",
+            "54.165.4.42",
             "54.81.80.189",
-            "3.226.96.24",
-            "54.165.4.42"
+            "34.230.186.253",
+            "52.202.74.127",
+            "54.85.7.239",
+            "3.214.242.45",
+            "3.218.162.209",
+            "3.226.111.93",
+            "34.232.174.143",
+            "34.195.173.122",
+            "3.218.112.31",
+            "35.172.167.44",
+            "52.71.74.107",
+            "54.145.49.123",
+            "52.5.220.246",
+            "34.206.62.254",
+            "3.213.147.143",
+            "52.2.150.28",
+            "3.228.78.219",
+            "3.209.3.232",
+            "34.235.180.162",
+            "34.239.39.134",
+            "3.224.3.80",
+            "35.173.3.158",
+            "3.94.220.22",
+            "52.1.124.13",
+            "52.2.14.71",
+            "35.173.167.253",
+            "3.222.43.26",
+            "3.212.83.203",
+            "3.230.53.225",
+            "35.171.109.191",
+            "3.214.182.153",
+            "34.197.202.126",
+            "52.71.167.163",
+            "54.83.146.170",
+            "52.7.199.54",
+            "34.227.187.18",
+            "52.7.184.177",
+            "34.197.66.165",
+            "52.72.191.48",
+            "52.45.71.214",
+            "34.238.65.211",
+            "34.231.40.113",
+            "52.0.178.195",
+            "34.228.93.200",
+            "3.223.93.237",
+            "3.218.3.143",
+            "52.72.77.194",
+            "54.210.133.45",
+            "34.227.133.179",
+            "3.217.69.239",
+            "34.193.5.242",
+            "54.82.164.248",
+            "54.156.178.64",
+            "34.239.89.209",
+            "3.214.209.46",
+            "3.225.243.236",
+            "54.83.186.225",
+            "3.211.190.38",
+            "3.216.50.20",
+            "34.206.159.43",
+            "52.23.131.79",
+            "52.207.170.164",
+            "3.224.36.18",
+            "3.216.253.146",
+            "35.173.151.18"
         ],
         "ipv6_addresses": [
-            "2406:da00:ff00::34cc:be9d",
-            "2406:da00:ff00::3de:2b1a",
-            "2406:da00:ff00::22c7:f0de",
-            "2406:da00:ff00::22e3:85b3",
-            "2406:da00:ff00::3401:7c0d",
-            "2406:da00:ff00::3401:eebd",
-            "2406:da00:ff00::3447:4a6b",
-            "2406:da00:ff00::3447:d391",
-            "2406:da00:ff00::22ed:c8d5",
-            "2406:da00:ff00::23ad:39e",
-            "2406:da00:ff00::3400:260d",
-            "2406:da00:ff00::3436:eba1",
-            "2406:da00:ff00::3e6:35e1",
-            "2406:da00:ff00::3d0:ec5e",
-            "2406:da00:ff00::3d4:53cb",
-            "2406:da00:ff00::3e0:2566",
-            "2406:da00:ff00::22e8:ae8f",
-            "2406:da00:ff00::3652:a4f8",
             "2406:da00:ff00::342d:47d6",
-            "2406:da00:ff00::3653:bae1",
-            "2406:da00:ff00::3447:df22",
-            "2406:da00:ff00::3400:2580",
-            "2406:da00:ff00::3d5:938f",
-            "2406:da00:ff00::3d6:d12e",
-            "2406:da00:ff00::3400:b2c3",
-            "2406:da00:ff00::36d2:852d",
-            "2406:da00:ff00::36eb:b3c4",
-            "2406:da00:ff00::3d6:b699",
-            "2406:da00:ff00::23ad:9712",
-            "2406:da00:ff00::34cf:aaa4",
-            "2406:da00:ff00::23ab:6dbf",
+            "2406:da00:ff00::3d0:ec5e",
+            "2406:da00:ff00::3e6:35e1",
+            "2406:da00:ff00::22c7:f0de",
+            "2406:da00:ff00::22ee:ad51",
+            "2406:da00:ff00::23ad:39e",
+            "2406:da00:ff00::23ad:a7fd",
+            "2406:da00:ff00::3401:7c0d",
+            "2406:da00:ff00::3650:df00",
+            "2406:da00:ff00::34c8:9c63",
+            "2406:da00:ff00::12d5:a083",
+            "2406:da00:ff00::34ca:aca",
+            "2406:da00:ff00::3d1:b0f5",
+            "2406:da00:ff00::3d6:d6ab",
+            "2406:da00:ff00::3402:1a8e",
+            "2406:da00:ff00::23a8:352f",
+            "2406:da00:ff00::22e8:25e0",
+            "2406:da00:ff00::3416:c89d",
+            "2406:da00:ff00::34c9:6a60",
             "2406:da00:ff00::3dc:535d",
-            "2406:da00:ff00::3d4:d309",
-            "2406:da00:ff00::3dc:4c73",
-            "2406:da00:ff00::22c5:b76c",
-            "2406:da00:ff00::3405:dcf6",
-            "2406:da00:ff00::3df:6f89",
-            "2406:da00:ff00::22c0:426a",
-            "2406:da00:ff00::3d0:c39f",
-            "2406:da00:ff00::36a5:d6ad",
-            "2406:da00:ff00::22c2:580d",
-            "2406:da00:ff00::3401:e6cd",
-            "2406:da00:ff00::3405:276f",
-            "2406:da00:ff00::34c8:3639",
+            "2406:da00:ff00::3448:c5df",
+            "2406:da00:ff00::3407:c736",
+            "2406:da00:ff00::34cf:aaa4",
+            "2406:da00:ff00::3449:e256",
+            "2406:da00:ff00::3d1:3e8",
+            "2406:da00:ff00::22e3:7a0b",
+            "2406:da00:ff00::3653:bae1",
+            "2406:da00:ff00::369c:b240",
+            "2406:da00:ff00::3447:9a66",
+            "2406:da00:ff00::34c8:c9b9",
+            "2406:da00:ff00::22c7:8eeb",
+            "2406:da00:ff00::3436:8e10",
             "2406:da00:ff00::3447:6d1e",
+            "2406:da00:ff00::36a0:3d91",
+            "2406:da00:ff00::22e0:b91",
+            "2406:da00:ff00::3da:a2d1",
+            "2406:da00:ff00::3403:6658",
+            "2406:da00:ff00::34ca:4a7f",
+            "2406:da00:ff00::36a5:42a",
+            "2406:da00:ff00::23ad:a6c8",
+            "2406:da00:ff00::3400:2580",
+            "2406:da00:ff00::3e2:633c",
+            "2406:da00:ff00::3e0:350",
+            "2406:da00:ff00::3da:38f",
+            "2406:da00:ff00::36eb:b3c4",
+            "2406:da00:ff00::3400:d490",
+            "2406:da00:ff00::3402:a9c5",
+            "2406:da00:ff00::3e1:6d03",
+            "2406:da00:ff00::3405:b701",
             "2600:9000:5301:8000::1",
             "2600:9000:5303:6400::1",
-            "2406:da00:ff00::3da:a2d1",
-            "2406:da00:ff00::23ad:a6c8",
-            "2406:da00:ff00::3d0:da1d",
-            "2406:da00:ff00::22e6:bafd",
-            "2406:da00:ff00::36ac:c89b",
-            "2406:da00:ff00::3e0:d91a",
-            "2406:da00:ff00::3691:317b",
+            "2406:da00:ff00::3d2:51b1",
+            "2406:da00:ff00::23aa:a069",
+            "2406:da00:ff00::22ce:3efe",
+            "2406:da00:ff00::22ef:2786",
+            "2406:da00:ff00::22e4:5dc8",
+            "2406:da00:ff00::3449:f901",
+            "2406:da00:ff00::3655:8db4",
+            "2406:da00:ff00::3d4:53cb",
             "2406:da00:ff00::3da:701f",
-            "2406:da00:ff00::22c3:ad7a",
-            "2406:da00:ff00::3e2:6f5d",
-            "2406:da00:ff00::3417:834f",
-            "2406:da00:ff00::3d6:cff7",
-            "2406:da00:ff00::34c9:6a60",
-            "2406:da00:ff00::3416:c89d",
-            "2406:da00:ff00::3e0:85e4",
-            "2406:da00:ff00::22e8:25e0",
-            "2406:da00:ff00::3407:c736",
-            "2406:da00:ff00::3407:b8b1",
-            "2406:da00:ff00::35e:dc16",
-            "2406:da00:ff00::3401:6df8",
-            "2406:da00:ff00::23ad:a7fd",
-            "2406:da00:ff00::3d8:3214",
-            "2406:da00:ff00::34cf:5f31",
+            "2406:da00:ff00::3df:6f89",
+            "2406:da00:ff00::3405:dcf6",
+            "2406:da00:ff00::3de:2b1a",
+            "2406:da00:ff00::3402:e47",
+            "2406:da00:ff00::22ed:c8d5",
+            "2406:da00:ff00::22c8:2339",
+            "2406:da00:ff00::23ad:9712",
             "2406:da00:ff00::3417:5e76",
-            "2406:da00:ff00::3404:8691",
-            "2406:da00:ff00::22c0:8ccd",
-            "2406:da00:ff00::3449:a50e",
-            "2406:da00:ff00::3449:e256",
-            "2406:da00:ff00::3447:a7a3"
+            "2406:da00:ff00::3d2:c437",
+            "2406:da00:ff00::23a8:abfc",
+            "2406:da00:ff00::6b17:1850",
+            "2406:da00:ff00::3436:e85c",
+            "2406:da00:ff00::22c6:d88b",
+            "2406:da00:ff00::3d6:cff7",
+            "2406:da00:ff00::3d8:fd92",
+            "2406:da00:ff00::12d6:f100",
+            "2406:da00:ff00::22c0:5f02",
+            "2406:da00:ff00::3e0:2412",
+            "2406:da00:ff00::36cc:7334"
         ],
         "http_server": "proxygen-bolt",
         "insecure_http": true,
@@ -559,103 +560,104 @@
         ],
         "root_ca": "DigiCert Inc",
         "rdns_names": [
-            "ec2-52-3-71-143.compute-1.amazonaws.com",
-            "ec2-52-5-39-111.compute-1.amazonaws.com",
-            "ec2-52-5-199-160.compute-1.amazonaws.com",
-            "ec2-52-71-109-30.compute-1.amazonaws.com",
-            "ec2-3-208-195-159.compute-1.amazonaws.com",
-            "ec2-18-235-93-155.compute-1.amazonaws.com",
-            "ec2-34-230-186-253.compute-1.amazonaws.com",
-            "ec2-35-173-166-200.compute-1.amazonaws.com",
-            "ec2-34-203-7-201.compute-1.amazonaws.com",
-            "ec2-52-2-150-28.compute-1.amazonaws.com",
-            "ec2-52-71-223-34.compute-1.amazonaws.com",
-            "ec2-34-239-39-134.compute-1.amazonaws.com",
-            "ec2-35-170-160-105.compute-1.amazonaws.com",
-            "ec2-52-0-178-195.compute-1.amazonaws.com",
-            "ec2-52-0-37-128.compute-1.amazonaws.com",
-            "ec2-52-73-249-1.compute-1.amazonaws.com",
-            "ec2-52-87-133-20.compute-1.amazonaws.com",
-            "ec2-52-54-142-16.compute-1.amazonaws.com",
-            "ec2-3-223-93-237.compute-1.amazonaws.com",
-            "ec2-54-156-178-64.compute-1.amazonaws.com",
-            "ec2-34-195-3-186.compute-1.amazonaws.com",
-            "ec2-3-211-190-38.compute-1.amazonaws.com",
-            "ec2-3-228-78-219.compute-1.amazonaws.com",
-            "ec2-34-239-18-154.compute-1.amazonaws.com",
-            "ec2-107-23-24-80.compute-1.amazonaws.com",
-            "ec2-3-210-57-193.compute-1.amazonaws.com",
-            "ec2-3-214-207-247.compute-1.amazonaws.com",
-            "ec2-52-54-232-92.compute-1.amazonaws.com",
-            "ec2-52-7-184-177.compute-1.amazonaws.com",
-            "ec2-34-227-187-18.compute-1.amazonaws.com",
-            "ec2-34-206-33-202.compute-1.amazonaws.com",
-            "ec2-35-173-167-253.compute-1.amazonaws.com",
-            "ec2-52-1-109-248.compute-1.amazonaws.com",
-            "ec2-52-1-238-189.compute-1.amazonaws.com",
-            "ec2-34-197-66-165.compute-1.amazonaws.com",
-            "ec2-54-82-164-248.compute-1.amazonaws.com",
-            "ec2-34-232-174-143.compute-1.amazonaws.com",
-            "ec2-3-219-90-152.compute-1.amazonaws.com",
-            "ec2-52-23-131-79.compute-1.amazonaws.com",
-            "ec2-34-231-40-113.compute-1.amazonaws.com",
-            "ec2-3-94-220-22.compute-1.amazonaws.com",
-            "ec2-3-224-37-102.compute-1.amazonaws.com",
-            "ec2-3-223-111-137.compute-1.amazonaws.com",
-            "ec2-34-195-173-122.compute-1.amazonaws.com",
-            "ec2-3-209-65-38.compute-1.amazonaws.com",
-            "ec2-34-238-65-211.compute-1.amazonaws.com",
-            "ec2-52-204-190-157.compute-1.amazonaws.com",
-            "ec2-52-5-183-1.compute-1.amazonaws.com",
-            "ec2-52-6-191-0.compute-1.amazonaws.com",
-            "ec2-34-228-93-200.compute-1.amazonaws.com",
-            "ec2-52-200-201-185.compute-1.amazonaws.com",
-            "ec2-18-214-150-8.compute-1.amazonaws.com",
-            "ec2-34-196-209-8.compute-1.amazonaws.com",
-            "ec2-54-204-115-52.compute-1.amazonaws.com",
-            "ec2-52-73-165-14.compute-1.amazonaws.com",
-            "ec2-3-220-76-115.compute-1.amazonaws.com",
-            "ec2-52-71-167-163.compute-1.amazonaws.com",
-            "ec2-3-212-211-9.compute-1.amazonaws.com",
-            "ec2-3-211-195-191.compute-1.amazonaws.com",
-            "ec2-3-224-36-18.compute-1.amazonaws.com",
-            "ec2-52-4-134-145.compute-1.amazonaws.com",
-            "ec2-34-206-62-254.compute-1.amazonaws.com",
-            "ec2-35-153-214-22.compute-1.amazonaws.com",
-            "ec2-34-239-89-209.compute-1.amazonaws.com",
-            "ec2-3-210-81-177.compute-1.amazonaws.com",
-            "ec2-3-225-109-3.compute-1.amazonaws.com",
-            "ec2-54-82-122-213.compute-1.amazonaws.com",
-            "ec2-3-214-209-46.compute-1.amazonaws.com",
-            "ec2-3-224-3-80.compute-1.amazonaws.com",
-            "ec2-54-172-200-155.compute-1.amazonaws.com",
-            "ec2-54-145-10-249.compute-1.amazonaws.com",
-            "ec2-3-218-162-209.compute-1.amazonaws.com",
             "ec2-34-224-11-145.compute-1.amazonaws.com",
+            "ec2-52-1-230-205.compute-1.amazonaws.com",
+            "ec2-52-45-116-207.compute-1.amazonaws.com",
+            "ec2-52-200-54-57.compute-1.amazonaws.com",
+            "ec2-54-145-10-249.compute-1.amazonaws.com",
+            "ec2-3-208-218-29.compute-1.amazonaws.com",
+            "ec2-3-217-178-33.compute-1.amazonaws.com",
             "ec2-34-192-66-106.compute-1.amazonaws.com",
+            "ec2-18-235-93-155.compute-1.amazonaws.com",
+            "ec2-54-165-4-42.compute-1.amazonaws.com",
             "ec2-54-81-80-189.compute-1.amazonaws.com",
-            "ec2-3-226-96-24.compute-1.amazonaws.com",
-            "ec2-54-165-4-42.compute-1.amazonaws.com"
+            "ec2-34-230-186-253.compute-1.amazonaws.com",
+            "ec2-52-202-74-127.compute-1.amazonaws.com",
+            "ec2-54-85-7-239.compute-1.amazonaws.com",
+            "ec2-3-214-242-45.compute-1.amazonaws.com",
+            "ec2-3-218-162-209.compute-1.amazonaws.com",
+            "ec2-3-226-111-93.compute-1.amazonaws.com",
+            "ec2-34-232-174-143.compute-1.amazonaws.com",
+            "ec2-34-195-173-122.compute-1.amazonaws.com",
+            "ec2-3-218-112-31.compute-1.amazonaws.com",
+            "ec2-35-172-167-44.compute-1.amazonaws.com",
+            "ec2-52-71-74-107.compute-1.amazonaws.com",
+            "ec2-54-145-49-123.compute-1.amazonaws.com",
+            "ec2-52-5-220-246.compute-1.amazonaws.com",
+            "ec2-34-206-62-254.compute-1.amazonaws.com",
+            "ec2-3-213-147-143.compute-1.amazonaws.com",
+            "ec2-52-2-150-28.compute-1.amazonaws.com",
+            "ec2-3-228-78-219.compute-1.amazonaws.com",
+            "ec2-3-209-3-232.compute-1.amazonaws.com",
+            "ec2-34-235-180-162.compute-1.amazonaws.com",
+            "ec2-34-239-39-134.compute-1.amazonaws.com",
+            "ec2-3-224-3-80.compute-1.amazonaws.com",
+            "ec2-35-173-3-158.compute-1.amazonaws.com",
+            "ec2-3-94-220-22.compute-1.amazonaws.com",
+            "ec2-52-1-124-13.compute-1.amazonaws.com",
+            "ec2-52-2-14-71.compute-1.amazonaws.com",
+            "ec2-35-173-167-253.compute-1.amazonaws.com",
+            "ec2-3-222-43-26.compute-1.amazonaws.com",
+            "ec2-3-212-83-203.compute-1.amazonaws.com",
+            "ec2-3-230-53-225.compute-1.amazonaws.com",
+            "ec2-35-171-109-191.compute-1.amazonaws.com",
+            "ec2-3-214-182-153.compute-1.amazonaws.com",
+            "ec2-34-197-202-126.compute-1.amazonaws.com",
+            "ec2-52-71-167-163.compute-1.amazonaws.com",
+            "ec2-54-83-146-170.compute-1.amazonaws.com",
+            "ec2-52-7-199-54.compute-1.amazonaws.com",
+            "ec2-34-227-187-18.compute-1.amazonaws.com",
+            "ec2-52-7-184-177.compute-1.amazonaws.com",
+            "ec2-34-197-66-165.compute-1.amazonaws.com",
+            "ec2-52-72-191-48.compute-1.amazonaws.com",
+            "ec2-52-45-71-214.compute-1.amazonaws.com",
+            "ec2-34-238-65-211.compute-1.amazonaws.com",
+            "ec2-34-231-40-113.compute-1.amazonaws.com",
+            "ec2-52-0-178-195.compute-1.amazonaws.com",
+            "ec2-34-228-93-200.compute-1.amazonaws.com",
+            "ec2-3-223-93-237.compute-1.amazonaws.com",
+            "ec2-3-218-3-143.compute-1.amazonaws.com",
+            "ec2-52-72-77-194.compute-1.amazonaws.com",
+            "ec2-54-210-133-45.compute-1.amazonaws.com",
+            "ec2-34-227-133-179.compute-1.amazonaws.com",
+            "ec2-3-217-69-239.compute-1.amazonaws.com",
+            "ec2-34-193-5-242.compute-1.amazonaws.com",
+            "ec2-54-82-164-248.compute-1.amazonaws.com",
+            "ec2-54-156-178-64.compute-1.amazonaws.com",
+            "ec2-34-239-89-209.compute-1.amazonaws.com",
+            "ec2-3-214-209-46.compute-1.amazonaws.com",
+            "ec2-3-225-243-236.compute-1.amazonaws.com",
+            "ec2-54-83-186-225.compute-1.amazonaws.com",
+            "ec2-3-211-190-38.compute-1.amazonaws.com",
+            "ec2-3-216-50-20.compute-1.amazonaws.com",
+            "ec2-34-206-159-43.compute-1.amazonaws.com",
+            "ec2-52-23-131-79.compute-1.amazonaws.com",
+            "ec2-52-207-170-164.compute-1.amazonaws.com",
+            "ec2-3-224-36-18.compute-1.amazonaws.com",
+            "ec2-3-216-253-146.compute-1.amazonaws.com",
+            "ec2-35-173-151-18.compute-1.amazonaws.com"
         ],
         "rtt_range": [
-            45,
-            60
+            47,
+            115
         ],
         "geo_locations": [
             "United States",
-            "Elkridge, Maryland, United States",
-            "Hollywood, Florida, United States",
             "Virginia, United States",
             "Ashburn, Virginia, United States",
+            "Fort Worth, Texas, United States",
+            "Elkridge, Maryland, United States",
+            "Brooklyn, New York, United States",
             "Queens, New York, United States",
-            "Brooklyn, New York, United States"
+            "Townsend, Delaware, United States",
+            "Charlotte, North Carolina, United States"
         ]
     },
     "walmart.com": {
-        "scan_time": 1606793517.3619719,
+        "scan_time": 1606861891.297364,
         "ipv4_addresses": [
-            "161.170.232.170",
-            "161.170.230.170"
+            "161.170.230.170",
+            "161.170.232.170"
         ],
         "ipv6_addresses": [],
         "http_server": null,
@@ -669,15 +671,15 @@
         "root_ca": "GlobalSign nv-sa",
         "rdns_names": [],
         "rtt_range": [
-            46,
-            48
+            66,
+            76
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "northwestern.edu": {
-        "scan_time": 1606793526.258111,
+        "scan_time": 1606861899.1779761,
         "ipv4_addresses": [
             "129.105.136.48"
         ],
@@ -694,15 +696,15 @@
         "root_ca": "COMODO CA Limited",
         "rdns_names": [],
         "rtt_range": [
-            26,
-            26
+            60,
+            60
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "mccormick.northwestern.edu": {
-        "scan_time": 1606793534.558037,
+        "scan_time": 1606861912.265373,
         "ipv4_addresses": [
             "129.105.1.129"
         ],
@@ -721,15 +723,15 @@
             "mccormick.northwestern.edu"
         ],
         "rtt_range": [
-            29,
-            29
+            56,
+            56
         ],
         "geo_locations": [
             "Chicago, Illinois, United States"
         ]
     },
     "kellogg.northwestern.edu": {
-        "scan_time": 1606793540.7808251,
+        "scan_time": 1606861920.918603,
         "ipv4_addresses": [
             "165.124.147.150"
         ],
@@ -746,15 +748,15 @@
         "root_ca": "Internet2",
         "rdns_names": [],
         "rtt_range": [
-            25,
-            25
+            76,
+            76
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "users.cs.northwestern.edu": {
-        "scan_time": 1606793546.925028,
+        "scan_time": 1606861928.212939,
         "ipv4_addresses": [
             "165.124.180.20"
         ],
@@ -771,15 +773,15 @@
             "web1.cs.northwestern.edu"
         ],
         "rtt_range": [
-            28,
-            28
+            33,
+            33
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "uchicago.edu": {
-        "scan_time": 1606793552.278281,
+        "scan_time": 1606861935.3828638,
         "ipv4_addresses": [
             "34.200.129.209"
         ],
@@ -797,15 +799,15 @@
             "ec2-34-200-129-209.compute-1.amazonaws.com"
         ],
         "rtt_range": [
-            48,
-            48
+            65,
+            65
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "illinois.edu": {
-        "scan_time": 1606793561.6104808,
+        "scan_time": 1606861946.1223009,
         "ipv4_addresses": [
             "192.17.172.3"
         ],
@@ -824,15 +826,15 @@
             "tardis.techservices.illinois.edu"
         ],
         "rtt_range": [
-            45,
-            45
+            44,
+            44
         ],
         "geo_locations": [
             "Urbana, Illinois, United States"
         ]
     },
     "stevetarzia.com": {
-        "scan_time": 1606793568.760318,
+        "scan_time": 1606861957.437164,
         "ipv4_addresses": [
             "54.245.121.172"
         ],
@@ -851,30 +853,30 @@
             "grits.stevetarzia.com"
         ],
         "rtt_range": [
-            102,
-            102
+            116,
+            116
         ],
         "geo_locations": [
             "Boardman, Oregon, United States"
         ]
     },
     "clocktab.com": {
-        "scan_time": 1606793581.2198012,
+        "scan_time": 1606861971.08547,
         "ipv4_addresses": [
-            "172.67.170.56",
             "104.28.4.211",
-            "104.28.5.211"
+            "104.28.5.211",
+            "172.67.170.56"
         ],
         "ipv6_addresses": [
-            "2606:4700:3035::681c:4d3",
             "2606:4700:3035::ac43:aa38",
             "2606:4700:3032::681c:5d3",
-            "2803:f800:50::6ca2:c03c",
+            "2606:4700:3035::681c:4d3",
             "2a06:98c1:50::ac40:203c",
             "2606:4700:50::adf5:3a3c",
+            "2803:f800:50::6ca2:c03c",
+            "2a06:98c1:50::ac40:2156",
             "2606:4700:58::adf5:3b56",
-            "2803:f800:50::6ca2:c156",
-            "2a06:98c1:50::ac40:2156"
+            "2803:f800:50::6ca2:c156"
         ],
         "http_server": "cloudflare",
         "insecure_http": true,
@@ -889,38 +891,38 @@
         "root_ca": "\"Cloudflare, Inc.\"",
         "rdns_names": [],
         "rtt_range": [
-            33,
-            36
+            28,
+            64
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "auditoryneuroscience.com": {
-        "scan_time": 1606793592.579521,
+        "scan_time": 1606861977.70511,
         "ipv4_addresses": [
             "144.214.26.111"
         ],
         "ipv6_addresses": [],
-        "http_server": null,
-        "insecure_http": false,
+        "http_server": "Apache/2.4.29 (Ubuntu)",
+        "insecure_http": true,
         "redirect_to_https": false,
         "hsts": false,
         "tls_versions": [],
-        "root_ca": null,
+        "root_ca": "Let's Encrypt",
         "rdns_names": [
             "twinkle.bms.cityu.edu.hk"
         ],
         "rtt_range": [
-            213,
-            213
+            218,
+            218
         ],
         "geo_locations": [
             "Central, Central and Western District, Hong Kong"
         ]
     },
     "asee.org": {
-        "scan_time": 1606793644.8757188,
+        "scan_time": 1606862021.445289,
         "ipv4_addresses": [
             "216.185.13.131"
         ],
@@ -939,15 +941,15 @@
             "216-185-13-131.i95.net"
         ],
         "rtt_range": [
-            65,
-            65
+            87,
+            87
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "gradeinflation.com": {
-        "scan_time": 1606793651.439349,
+        "scan_time": 1606862031.788566,
         "ipv4_addresses": [
             "66.70.176.24"
         ],
@@ -965,15 +967,15 @@
             "ahs4.r4l.com"
         ],
         "rtt_range": [
-            51,
-            51
+            97,
+            97
         ],
         "geo_locations": [
             "Beauharnois, Quebec, Canada"
         ]
     },
     "spacejam.com": {
-        "scan_time": 1606793657.546561,
+        "scan_time": 1606862038.7181818,
         "ipv4_addresses": [
             "99.83.180.228",
             "75.2.104.223"
@@ -983,25 +985,22 @@
         "insecure_http": true,
         "redirect_to_https": true,
         "hsts": false,
-        "tls_versions": [
-            "TLSv1.1",
-            "TLSv1.2"
-        ],
-        "root_ca": "GlobalSign nv-sa",
+        "tls_versions": [],
+        "root_ca": null,
         "rdns_names": [
             "a259cf76d74e1f65f.awsglobalaccelerator.com",
             "a259cf76d74e1f65f.awsglobalaccelerator.com"
         ],
         "rtt_range": [
-            30,
-            38
+            34,
+            40
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "pmichaud.com": {
-        "scan_time": 1606793664.5332491,
+        "scan_time": 1606862077.8683252,
         "ipv4_addresses": [
             "23.254.203.248"
         ],
@@ -1019,15 +1018,15 @@
             "hwsrv-233708.hostwindsdns.com"
         ],
         "rtt_range": [
-            63,
-            63
+            96,
+            96
         ],
         "geo_locations": [
             "United States"
         ]
     },
     "kli.org": {
-        "scan_time": 1606793673.33581,
+        "scan_time": 1606862087.5694258,
         "ipv4_addresses": [
             "208.97.188.67"
         ],
@@ -1044,8 +1043,8 @@
             "ps506619.dreamhostps.com"
         ],
         "rtt_range": [
-            71,
-            71
+            66,
+            66
         ],
         "geo_locations": [
             "United States"
